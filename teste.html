@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Beleriand</title>
+    <style>
+        .mapa-conteiner {
+            position: relative;
+            width: 1755px;
+            height: 1213px;
+        }
+        .mapa-conteiner img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .ponto {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+            border: 2px solid white;
+            transform: translate(-50%, -50%);
+        }
+        .ponto:hover {
+            width: 18px;
+            height: 18px;
+            background-color: gold;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Posicionamento - Beleriand</h1>
+
+    <div class="mapa-conteiner">
+        <img src="img1.jpg" alt="Mapa de Beleriand">
+        <div class="ponto" style="left: 59.17%; top: 37.39%;" title="Menegroth"></div>
+        <div class="ponto" style="left: 47.04%; top: 22.75%;" title="Gondolin"></div>
+        <div class="ponto" style="left: 32.2%; top: 22.73%;" title="Dor-Lómin"></div>
+        <div class="ponto" style="left: 73.94%; top: 22.75%;" title="Himring"></div>
+        <div class="ponto" style="left: 35.99%; top: 50.78%;" title="Nargothrond"></div>
+        <div class="ponto" style="left: 44.17%; top: 19.93%;" title="Tol Sirion"></div>
+        <div class="ponto" style="left: 9.57%; top: 34.27%;" title="Vinyamar"></div>
+        <div class="ponto" style="left: 43.62%; top: 43.67%;" title="Amon Rûdh"></div>
+        <div class="ponto" style="left: 38.38%; top: 15.97%;" title="Mithrim"></div>
+        <div class="ponto" style="left: 46.59%; top: 51.09%;" title="Queda do Sirion"></div>
+    </div>
+</body>
+</html>
