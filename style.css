@@ -208,3 +208,16 @@
 .relacionado span {
     display: block;
 }
+
+.quote {
+    margin: 1rem 0 0;
+    padding: 0 0 0 1rem;
+    border-left: 3px solid #8b6b3d;
+    font-style: italic;
+    text-align: start;
+    opacity: 0.85;
+}
+
+.quote[hidden] {
+    display: none;
+}

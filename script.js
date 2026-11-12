@@ -67,6 +67,7 @@ const lugares = {
 const personagens = {
     turin : {
         nome : "Túrin Turambar",
+        quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
         descricao : "<strong>Túrin Turambar</strong> foi um guerreiro dos Homens da Casa de Hador, filho de Húrin e Morwen, e um dos maiores heróis trágicos da Primeira Era. Criado em Doriath como pupilo de Thingol, tornou-se um combatente temido, conhecido como Adanedhel, Gwindor e Mormegil, a Espada Negra de Nargothrond. Seu destino foi marcado pela maldição de Morgoth sobre a família de Húrin, que o levou a causar a ruína de Nargothrond e, sem saber, a se casar com a própria irmã, Níniel. Ao descobrir a verdade, matou Glaurung, o Pai dos Dragões, e tirou a própria vida com a espada Gurthang, às margens de Cabed-en-Aras.",
         imagem : "turin.png",
         lugares : ["dorlómin", "nargothrond", "amonrûdh"]
@@ -87,6 +88,7 @@ app.innerHTML = `
             <section class="painel-texto">
                 <h2 id="painel-titulo"></h2>
                 <p id="painel-tipo"></p>
+                <blockquote id="painel-quote" class="quote" hidden></blockquote>
                 <p id="painel-descricao"></p>
             </section>
             <section id="painel-personagens" class="relacionados" hidden>
@@ -149,12 +151,23 @@ function mostrarImagem(src) {
     document.getElementById("painel-rolagem").scrollTop = 0;
 }
 
+function mostrarFrase(texto) {
+    const frase = document.getElementById("painel-quote");
+    if (texto) {
+        frase.textContent = `“${texto}”`;
+        frase.hidden = false;
+    } else {
+        frase.hidden = true;
+    }
+}
+
 function abrirPainel(id) {
     trocarConteudo(() => {
         const lugar = lugares[id];
         document.getElementById("painel-titulo").textContent = lugar.nome;
         document.getElementById("painel-tipo").textContent = lugar.tipo;
         document.getElementById("painel-descricao").innerHTML = lugar.descricao;
+        mostrarFrase(lugar.quote);
         mostrarImagem(`imagens/${id}.jpg`);
 
         const secao = document.getElementById("painel-personagens");
@@ -189,6 +202,7 @@ function abrirPersonagem(pid) {
         document.getElementById("painel-titulo").textContent = p.nome;
         document.getElementById("painel-tipo").textContent = "Personagem";
         document.getElementById("painel-descricao").innerHTML = p.descricao;
+        mostrarFrase(p.quote);
         mostrarImagem(`imagens/${p.imagem}`);
         document.getElementById("painel-personagens").hidden = true;
     });
