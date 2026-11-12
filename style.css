@@ -6,7 +6,7 @@
     height: 1213px;
 }
 
-.mapa-conteiner img {
+.mapa-img {
     width: 100%;
     height: 100%;
     display: block;
@@ -15,50 +15,196 @@
 .ponto {
     position: absolute;
     transform: translate(-50%, -50%);
-    
-    text-decoration: none;
-
-    font-family: 'Cinzel', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #040404; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7);
-    white-space: nowrap; 
-    
     cursor: pointer;
     user-select: none;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.ponto img {
+    width: 150px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.6));
 }
 
 .ponto:hover {
-    color: #ffd700; 
-    transform: translate(-50%, -50%) scale(1.15); 
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+}
+
+.ponto:hover img {
+    filter: drop-shadow(0 0 8px rgba(30, 25, 2, 0.9));
 }
 
 .painel {
     position: fixed;
     top: 0;
-    right: -400px;
-    width: 400px;
+    left: 0;
+    width: 500px;
+    max-width: 100%;
     height: 100%;
-    padding: 20px;
-    background: #477023;
-    color: #e8d9b5;
+    z-index: 80;
+    overflow: hidden;
     font-family: 'Cinzel', serif;
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.6);
-    transition: right 0.3s ease;
+    color: #242629;
+    background: #F5ECDA url(imagens/paper.png);
+    transform: translateX(-100%);
+    transition: transform 0.75s ease-in;
 }
 
 .painel.aberto {
+    transform: translateX(0);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.75s ease-out;
+}
+
+.painel-rolagem {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #8b6b3d transparent;
+}
+
+.painel::after {
+    content: '';
+    position: absolute;
+    left: 0;
     right: 0;
+    bottom: 0;
+    height: 60px;
+    pointer-events: none;
+    background: linear-gradient(0deg, #F5ECDA 0, rgba(245, 236, 218, 0) 100%);
 }
 
 .fechar {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    z-index: 5;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(36, 38, 41, 0.55);
+    color: #F5ECDA;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.fechar:hover {
+    color: #ffad00;
+}
+
+.painel-imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background: #0f3562;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 100%);
+}
+
+.painel-imagem[hidden] {
+    display: none;
+}
+
+.painel-texto {
+    padding: 1.5rem 3rem 1rem;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.ponto-texto {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b2412;
+    white-space: nowrap;
+    background: rgba(240, 226, 190, 0.88);
+    padding: 3px 10px;
+    border: 1px solid #8b6b3d;
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+.ponto-texto:hover {
+    background: #f7e9b8;
+    color: #7a1f0a;
+}
+
+
+#painel-titulo {
+    margin: 0;
+    font-variant: small-caps;
+    font-size: 2em;
+    line-height: normal;
+    text-align: start;
+}
+
+#painel-tipo {
+    margin: 0.25rem 0 0;
+    font-size: 0.8em;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+#painel-descricao {
+    margin: 1rem 0 0;
+}
+
+.relacionados {
+    padding: 1rem 2.5rem;
+}
+
+.relacionados h3 {
+    margin: 0 0 0.5rem;
+    padding: 0 0.5rem;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.relacionados-lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.relacionado {
+    width: 115px;
+    max-width: 100%;
+    margin: 0.5rem;
+    padding: 0;
     background: none;
     border: none;
-    color: #e8d9b5;
-    font-size: 28px;
     cursor: pointer;
-    float: right;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: inherit;
+}
+
+.relacionado img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    background: #0f3562;
+    clip-path: polygon(2rem 0, calc(100% - 2rem) 0, 100% 2rem, 100% calc(100% - 2rem),
+                       calc(100% - 2rem) 100%, 2rem 100%, 0 calc(100% - 2rem), 0 2rem);
+    transition: clip-path 0.2s ease-in;
+}
+
+.relacionado:hover img {
+    clip-path: polygon(1rem 0, calc(100% - 1rem) 0, 100% 1rem, 100% calc(100% - 1rem),
+                       calc(100% - 1rem) 100%, 1rem 100%, 0 calc(100% - 1rem), 0 1rem);
+}
+
+.relacionado span {
+    display: block;
 }

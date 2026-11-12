@@ -3,34 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa de Beleriand</title>
+    <title>Mapa de Beleriand | O Silmarillion</title>
+    <meta name="description" content="Um mapa e linha do tempo interativo de Beleriand, o continente em que a obra de J.R.R. Tolkien acontece.">
+    <meta property="og:title" content="Mapa Interativo de Beleriand | O Silmarillion">
+    <meta property="og:description" content="Um mapa e linha do tempo interativo de Beleriand, o continente em que a obra de J.R.R. Tolkien acontece.">
+    <meta property="og:site_name" content="Eldaliéva">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="mapa-conteiner">
-        <img src="beleriandmap.jpg" alt="Mapa de Beleriand">
-
-        <a class="ponto" data-id="menegroth" style="left: 59.17%; top: 37.39%;">Menegroth</a>
-        <a class="ponto" data-id="gondolin" style="left: 47.04%; top: 22.75%;">Gondolin</a>
-        <a class="ponto" data-id="dorlómin" style="left: 32.2%; top: 22.73%;">Dor-Lómin</a>
-        <a class="ponto" data-id="himring" style="left: 73.94%; top: 22.75%;">Himring</a>
-        <a class="ponto" data-id="nargothrond" style="left: 35.99%; top: 50.78%;">Nargothrond</a>
-        <a class="ponto" data-id="tolsirion" style="left: 44.17%; top: 19.93%;">Tol Sirion</a>
-        <a class="ponto" data-id="vinyamar" style="left: 9.57%; top: 34.27%;">Vinyamar</a>
-        <a class="ponto" data-id="amonrûdh" style="left: 43.62%; top: 43.67%;">Amon Rûdh</a>
-        <a class="ponto" data-id="mithrim" style="left: 38.38%; top: 15.97%;">Mithrim</a>
-        <a class="ponto" data-id="quedadosirion" style="left: 46.59%; top: 51.09%;">Queda do Sirion</a>
-    </div>
-
-    <aside id="painel" class="painel">
-        <button id="fechar" class="fechar">X</button>
-        <h2 id="painel-titulo"> </h2>
-        <p id="painel-tipo"> </p>
-        <p id="painel-descricao"> </p>
-    </aside>
-
-    <script src="script.js"></script>
-
+    <noscript>
+        <strong>Este site não funciona sem JavaScript. Ative-o para continuar.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script src="script.js" defer></script>
 </body>
 </html>

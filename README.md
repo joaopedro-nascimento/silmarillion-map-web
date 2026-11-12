@@ -2,7 +2,7 @@
 
 Um mapa interativo e linha do tempo dos acontecimentos da Primeira Era de Arda (*O Silmarillion*), desenvolvido como projeto de estudos de Engenharia de Computação.
 
-![Preview do Mapa](beleriand.jpg)
+![Preview do Mapa](imagens/beleriand.jpg)
 
 ## Destaques
 * **Ilustração Autoral:** Mapa de Beleriand desenhado à mão e digitalizado especificamente para o projeto.
