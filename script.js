@@ -67,10 +67,20 @@ const lugares = {
 const personagens = {
     turin : {
         nome : "Túrin Turambar",
+        raca : "Homem",
         quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
         descricao : "<strong>Túrin Turambar</strong> foi um guerreiro dos Homens da Casa de Hador, filho de Húrin e Morwen, e um dos maiores heróis trágicos da Primeira Era. Criado em Doriath como pupilo de Thingol, tornou-se um combatente temido, conhecido como Adanedhel, Gwindor e Mormegil, a Espada Negra de Nargothrond. Seu destino foi marcado pela maldição de Morgoth sobre a família de Húrin, que o levou a causar a ruína de Nargothrond e, sem saber, a se casar com a própria irmã, Níniel. Ao descobrir a verdade, matou Glaurung, o Pai dos Dragões, e tirou a própria vida com a espada Gurthang, às margens de Cabed-en-Aras.",
         imagem : "turin.png",
         lugares : ["dorlómin", "nargothrond", "amonrûdh"]
+    },
+
+    fingolfin : {
+        nome : "Fingolfin",
+        raca : "Elfo Noldo",
+        quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
+        descricao : "<strong>Fingolfin</strong> é o segundo filho de Finwë, o mais velho dos meios-irmãos de Fëanor; Alto Rei dos Noldor em Beleriand, habitando Hithlum; morto por Morgoth em combate singular.",
+        imagem : "fingolfin.png",
+        lugares : ["hithlum", "dorlómin", "gondolin"]
     }
 }
 
@@ -115,7 +125,7 @@ Object.entries(lugares).forEach(([id, lugar]) => {
 
     if (lugar.icone) {
         const img = document.createElement("img");
-        img.src = `imagens/${lugar.icone}`;
+        img.src = `imagens/nomes/${lugar.icone}`;
         img.alt = lugar.nome;
         img.style.width = lugar.largura + "px";
         if (lugar.rotacao) img.style.rotate = lugar.rotacao + "deg";
@@ -195,12 +205,12 @@ function abrirPainel(id) {
         document.getElementById("painel-tipo").textContent = lugar.tipo;
         document.getElementById("painel-descricao").innerHTML = lugar.descricao;
         mostrarFrase(lugar.quote);
-        mostrarImagem(`imagens/${id}.jpg`);
+        mostrarImagem(`imagens/lugares/${id}.jpg`);
 
         montarRelacionados(
             "painel-personagens", "lista-personagens",
             lugar.personagens, personagens,
-            (pid, p) => `imagens/${p.imagem}`,
+            (pid, p) => `imagens/personagens/${p.imagem}`,
             abrirPersonagem
         );
         montarRelacionados("painel-lugares", "lista-lugares", [], lugares, () => "", abrirPainel);
@@ -211,15 +221,15 @@ function abrirPersonagem(pid) {
     trocarConteudo(() => {
         const p = personagens[pid];
         document.getElementById("painel-titulo").textContent = p.nome;
-        document.getElementById("painel-tipo").textContent = "Personagem";
+        document.getElementById("painel-tipo").textContent = p.raca || "Personagem";
         document.getElementById("painel-descricao").innerHTML = p.descricao;
         mostrarFrase(p.quote);
-        mostrarImagem(`imagens/${p.imagem}`);
+        mostrarImagem(`imagens/personagens/${p.imagem}`);
 
         montarRelacionados(
             "painel-lugares", "lista-lugares",
             p.lugares, lugares,
-            (id) => `imagens/${id}.jpg`,
+            (id) => `imagens/lugares/${id}.jpg`,
             abrirPainel
         );
         montarRelacionados("painel-personagens", "lista-personagens", [], personagens, () => "", abrirPersonagem);
