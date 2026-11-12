@@ -91,6 +91,10 @@ app.innerHTML = `
                 <blockquote id="painel-quote" class="quote" hidden></blockquote>
                 <p id="painel-descricao"></p>
             </section>
+            <section id="painel-lugares" class="relacionados" hidden>
+                <h3>Lugares</h3>
+                <div id="lista-lugares" class="relacionados-lista"></div>
+            </section>
             <section id="painel-personagens" class="relacionados" hidden>
                 <h3>Personagens</h3>
                 <div id="lista-personagens" class="relacionados-lista"></div>
@@ -161,6 +165,29 @@ function mostrarFrase(texto) {
     }
 }
 
+function montarRelacionados(secaoId, listaId, ids, fonte, caminhoImagem, aoClicar) {
+    const secao = document.getElementById(secaoId);
+    const lista = document.getElementById(listaId);
+    lista.innerHTML = "";
+
+    const validos = (ids || []).filter(id => fonte[id]);
+
+    validos.forEach(id => {
+        const dado = fonte[id];
+        const item = document.createElement("button");
+        item.className = "relacionado";
+        item.title = dado.nome;
+        item.innerHTML = `
+            <img src="${caminhoImagem(id, dado)}" alt="${dado.nome}">
+            <span>${dado.nome}</span>
+        `;
+        item.addEventListener("click", () => aoClicar(id));
+        lista.appendChild(item);
+    });
+
+    secao.hidden = validos.length === 0;
+}
+
 function abrirPainel(id) {
     trocarConteudo(() => {
         const lugar = lugares[id];
@@ -170,29 +197,13 @@ function abrirPainel(id) {
         mostrarFrase(lugar.quote);
         mostrarImagem(`imagens/${id}.jpg`);
 
-        const secao = document.getElementById("painel-personagens");
-        const lista = document.getElementById("lista-personagens");
-        lista.innerHTML = "";
-
-        if (lugar.personagens && lugar.personagens.length > 0) {
-            lugar.personagens.forEach(pid => {
-                const p = personagens[pid];
-                if (!p) return;
-
-                const item = document.createElement("button");
-                item.className = "relacionado";
-                item.title = p.nome;
-                item.innerHTML = `
-                    <img src="imagens/${p.imagem}" alt="${p.nome}">
-                    <span>${p.nome}</span>
-                `;
-                item.addEventListener("click", () => abrirPersonagem(pid));
-                lista.appendChild(item);
-            });
-            secao.hidden = false;
-        } else {
-            secao.hidden = true;
-        }
+        montarRelacionados(
+            "painel-personagens", "lista-personagens",
+            lugar.personagens, personagens,
+            (pid, p) => `imagens/${p.imagem}`,
+            abrirPersonagem
+        );
+        montarRelacionados("painel-lugares", "lista-lugares", [], lugares, () => "", abrirPainel);
     });
 }
 
@@ -204,7 +215,14 @@ function abrirPersonagem(pid) {
         document.getElementById("painel-descricao").innerHTML = p.descricao;
         mostrarFrase(p.quote);
         mostrarImagem(`imagens/${p.imagem}`);
-        document.getElementById("painel-personagens").hidden = true;
+
+        montarRelacionados(
+            "painel-lugares", "lista-lugares",
+            p.lugares, lugares,
+            (id) => `imagens/${id}.jpg`,
+            abrirPainel
+        );
+        montarRelacionados("painel-personagens", "lista-personagens", [], personagens, () => "", abrirPersonagem);
     });
 }
 
