@@ -9,14 +9,15 @@ const lugares = {
         nome : "Gondolin",
         tipo : "Cidade",
         descricao : "\"A Rocha Oculta\", cidade secreta do Rei Turgon, protegida pelas Montanhas Circundantes (Echoriath).",
-        x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78
+        x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78,
+        personagens : ["fingolfin"]
     },
     dorlómin: {
         nome : "Dor-lómin",
         tipo : "Região",
         descricao : "Região ao sul de Hithlum, o território de Fingon oferecido como feudo à Casa de Hador; lar de Húrin e Morwen.",
         x: 29.9, y: 22.73, icone: "nomedorlomin.png", largura: 159, rotacao: 7,
-        personagens : ["turin"]
+        personagens : ["turin", "fingolfin"]
     },
     himring : {
         nome : "Himring",
@@ -54,7 +55,8 @@ const lugares = {
         nome : "Hithlum",
         tipo : "Região",
         descricao : "\"Terra da Bruma\", a região cuja divisa a leste e a sul são as Ered Wedthrin e no oeste são as Ered Lómin. Era uma terra bela enquanto o Cerco de Angband durou, embora seu ar fosse fresco e o inverno ali fosse frio.",
-        x: 27.4, y: 11.6, icone: "nomehithlum.png", largura: 240
+        x: 27.4, y: 11.6, icone: "nomehithlum.png", largura: 240,
+        personagens : ["fingolfin", "feanor"]
     },
     quedadosirion : {
         nome : "Queda do Sirion",
@@ -70,7 +72,7 @@ const personagens = {
         raca : "Homem",
         quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
         descricao : "<strong>Túrin Turambar</strong> foi um guerreiro dos Homens da Casa de Hador, filho de Húrin e Morwen, e um dos maiores heróis trágicos da Primeira Era. Criado em Doriath como pupilo de Thingol, tornou-se um combatente temido, conhecido como Adanedhel, Gwindor e Mormegil, a Espada Negra de Nargothrond. Seu destino foi marcado pela maldição de Morgoth sobre a família de Húrin, que o levou a causar a ruína de Nargothrond e, sem saber, a se casar com a própria irmã, Níniel. Ao descobrir a verdade, matou Glaurung, o Pai dos Dragões, e tirou a própria vida com a espada Gurthang, às margens de Cabed-en-Aras.",
-        imagem : "turin.png",
+        imagem : "turin.jpg",
         lugares : ["dorlómin", "nargothrond", "amonrûdh"]
     },
 
@@ -78,10 +80,21 @@ const personagens = {
         nome : "Fingolfin",
         raca : "Elfo Noldo",
         quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
-        descricao : "<strong>Fingolfin</strong> é o segundo filho de Finwë, o mais velho dos meios-irmãos de Fëanor; Alto Rei dos Noldor em Beleriand, habitando Hithlum; morto por Morgoth em combate singular.",
-        imagem : "fingolfin.png",
+        descricao : "<strong>Fingolfin</strong> é o segundo filho de Finwë, o mais velho dos meios-irmãos de Fëanor, pai de Fingon, Turgon, Aredhel e Argon, e esposo de Anairë. Foi o líder da hoste que atravessou o Helcaraxë, o Gelo Moedor, quando Fëanor queimou os navios em Losgar e deixou para trás aqueles que o seguiram. Guardou o cerco de Angband por quase quatrocentos anos, e é o último grande senhor a ostentar a unidade dos Noldor exilados; Alto Rei dos Noldor em Beleriand, habitando Hithlum; morto por Morgoth em combate singular.",
+        imagem : "fingolfin.jpg",
         lugares : ["hithlum", "dorlómin", "gondolin"]
-    }
+    },
+
+    feanor : {
+        nome : "Fëanor",
+        raca : "Elfo Noldo",
+        quote : "Belo há de ser o fim, ainda que longa e dura haja de ser a estrada!",
+        descricao : "<strong>Fëanor</strong> é o filho mais velho de Finwë (filho único de Finwë e Míriel), meio-irmão de Fingolfin e Finarfin,; o maior dos Noldor e líder de sua rebelião; inventor da escrita fëanoriana; criador das Silmarils; foi morto em Mithrim durante a Dagor-nuin-Giliath. Seu nome era <i>Curufinwë</i> (<i>curu</i> \"engenho\"), e ele deu o mesmo nome ao seu quinto filho, Curufin; mas ele próprio era conhecido pelo nome que sua mãe lhe deu, <i>Fëanáro</i> \"Espírito de Fogo\", que recebeu a forma sindarin <i>Fëanor</i>.",
+        imagem : "feanor.jpg",
+        lugares : ["hithlum"]
+    },
+
+    
 }
 
 const app = document.getElementById("app");
