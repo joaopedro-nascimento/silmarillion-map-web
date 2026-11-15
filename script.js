@@ -31,7 +31,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "<strong>\"A grande fortaleza subterrânea do rio Narog\"</strong>, fundada por Finrod Felagund e destruída por Glaurung; também o reino de Nargothrond, que se estendia a leste e a oeste do Narog.",
         x: 39.1, y: 48.3, icone: "nomenargothrond.png", largura: 90,
-        personagens : ["turin", "finrod"]
+        personagens : ["turin", "finrod", "glaurung"]
     },
     tolsirion : {
         nome : "Tol Sirion",
@@ -74,7 +74,7 @@ const personagens = {
         nome : "Túrin Turambar",
         raca : "Homem",
         quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
-        descricao : "<strong>Túrin Turambar</strong> foi um guerreiro dos Homens da Casa de Hador, filho de Húrin e Morwen, e um dos maiores heróis trágicos da Primeira Era. Criado em Doriath como pupilo de Thingol, tornou-se um combatente temido, conhecido como Adanedhel, Gwindor e Mormegil, a Espada Negra de Nargothrond. Seu destino foi marcado pela maldição de Morgoth sobre a família de Húrin, que o levou a causar a ruína de Nargothrond e, sem saber, a se casar com a própria irmã, Níniel. Ao descobrir a verdade, matou Glaurung, o Pai dos Dragões, e tirou a própria vida com a espada Gurthang, às margens de Cabed-en-Aras.",
+        descricao : "",
         imagem : "turin.jpg",
         lugares : ["dorlómin", "nargothrond", "amonrûdh"]
     },
@@ -150,6 +150,17 @@ const personagens = {
         descricao : "",
         imagem : "galadriel.jpeg",
         lugares : ["menegroth", "hithlum"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+
+    glaurung : {
+        nome : "Glaurung, Pai de Dragões",
+        raca : "Dragão",
+        quote : "Filho adotivo ingrato, proscrito, matador de teu amigo, ladrão de amor, usurpador de Nargothrond, capitão imprudente e desertor de tua família.",
+        descricao : "",
+        imagem : "glaurung.jpeg",
+        lugares : ["nargothrond"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     }
