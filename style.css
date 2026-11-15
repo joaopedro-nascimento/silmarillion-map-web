@@ -99,20 +99,64 @@
 }
 
 .painel-imagem {
+    position: sticky;
+    top: 0;
+    z-index: 0;
     display: block;
     width: 100%;
     height: auto;
-    margin: 0;
     background: #0f3562;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 100%);
 }
 
 .painel-imagem[hidden] {
     display: none;
 }
 
+.painel-corpo {
+    position: relative;
+    z-index: 1;
+    margin-top: -2rem;
+    padding-top: 2rem;
+    background: #F5ECDA url(imagens/paper.png);
+    clip-path: polygon(0 2rem, 100% 0, 100% 100%, 0 100%);
+}
+
+.painel-rolagem.sem-imagem .painel-corpo {
+    margin-top: 0;
+    clip-path: none;
+}
+
+.painel-credito {
+    position: absolute;
+    top: 1.0rem;
+    right: 2rem;
+    z-index: 2;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #55565c;
+}
+
+.painel-credito[hidden] {
+    display: none;
+}
+
+.painel-credito a {
+    color: #2c3e63;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.painel-credito a:hover,
+.painel-credito a:focus {
+    background: #0f3562;
+    color: #f6f8fa;
+    border-bottom-color: #0f3562;
+}
+
 .painel-texto {
-    padding: 1.5rem 3rem 1rem;
+    padding: 1rem 3rem;
     font-size: 14px;
     line-height: 1.9;
     text-align: justify;
