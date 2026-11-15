@@ -10,7 +10,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "\"A Rocha Oculta\", cidade secreta do Rei Turgon, protegida pelas Montanhas Circundantes (Echoriath).",
         x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78,
-        personagens : ["fingolfin"]
+        personagens : ["turgon", "fingolfin"]
     },
     dorlómin: {
         nome : "Dor-lómin",
@@ -30,19 +30,21 @@ const lugares = {
         tipo : "Cidade",
         descricao : "<strong>\"A grande fortaleza subterrânea do rio Narog\"</strong>, fundada por Finrod Felagund e destruída por Glaurung; também o reino de Nargothrond, que se estendia a leste e a oeste do Narog.",
         x: 39.1, y: 48.3, icone: "nomenargothrond.png", largura: 90,
-        personagens : ["turin"]
+        personagens : ["turin", "finrod"]
     },
     tolsirion : {
         nome : "Tol Sirion",
         tipo : "Cidade",
         descricao : "Ilha no rio, perto do Passo do Sirion, na qual Finrod construiu a torre de Minas Tirith; depois de ser tomada por Sauron, recebeu o nome de Tol-in-Gaurhoth.",
-        x: 43.2, y: 22.2, icone: "nometolsirion.png", largura: 50
+        x: 43.2, y: 22.2, icone: "nometolsirion.png", largura: 50,
+        personagens : ["finrod"]
     },
     vinyamar : {
         nome : "Vinyamar",
         tipo : "Cidade",
         descricao : "A casa de Turgon em Nevrast sob o Monte Taras. O significado é provavelmente \"Nova Morada\".",
-        x: 13.2, y: 32.8, icone: "nomevinyamar.png", largura: 87
+        x: 13.2, y: 32.8, icone: "nomevinyamar.png", largura: 87,
+        personagens : ["turgon"]
     },
     amonrûdh : {
         nome : "Amon Rûdh",
@@ -81,7 +83,7 @@ const personagens = {
         raca : "Elfo Noldo",
         quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
         descricao : "<strong>Fingolfin</strong> é o segundo filho de Finwë, o mais velho dos meios-irmãos de Fëanor, pai de Fingon, Turgon, Aredhel e Argon, e esposo de Anairë. Foi o líder da hoste que atravessou o Helcaraxë, o Gelo Moedor, quando Fëanor queimou os navios em Losgar e deixou para trás aqueles que o seguiram. Guardou o cerco de Angband por quase quatrocentos anos, e é o último grande senhor a ostentar a unidade dos Noldor exilados; Alto Rei dos Noldor em Beleriand, habitando Hithlum; morto por Morgoth em combate singular.",
-        imagem : "fingolfin.jpg",
+        imagem : "fingolfin.jpeg",
         lugares : ["hithlum", "dorlómin", "gondolin"]
     },
 
@@ -94,7 +96,23 @@ const personagens = {
         lugares : ["hithlum"]
     },
 
-    
+    turgon : {
+        nome : "Turgon",
+        raca : "Elfo Noldo",
+        quote : 'Grande é a queda de Gondolin, e a glória de meu povo jamais será esquecida! Contudo, eu não desferirei mais golpe algum em fuga... Sus! Aqui permaneço, e com a minha cidade hei de cair!',
+        descricao : 'Turgon é o Alto Rei dos Noldor após a queda de Fingon, e Senhor de Gondolin, a Cidade das Sete Nomes. É o segundo filho de Fingolfin, irmão de Fingon, Aredhel e Argon e pai de Idril Celebrindal. Esposo de Elenwë, que se perdeu no Helcaraxë. Guiado por sonhos que Ulmo lhe enviou, abandona Nevrast e ergue Gondolin sobre o Amon Gwareth, cercada por montanhas e vigiada pelas Águias. Recusa-se a lutar na Nirnaeth Arnoediad até o último momento, rejeita o chamado de Ulmo por Tuor e fecha as portas da cidade, convencido de que a segurança de Gondolin vale mais que a esperança de Beleriand. Morre defendendo as ruínas de sua torre quando Gondolin cai.',
+        imagem : "turgon.jpg",
+        lugares : ["vinyamar", "gondolin"]
+    },
+
+    finrod : {
+        nome : "Finrod Felagund",
+        raca : "Elfo Noldo",
+        quote : "Um juramento também hei de fazer, e devo estar livre para cumpri-lo e adentrar a escuridão. Nem nada de meu reino há de durar para que um filho possa herdá-lo.",
+        descricao : "<strong>Finrod</strong> é o Rei de Nargothrond e Senhor das Cavernas de Narog, conhecido como Felagund, “Senhor das Cavernas”. É o filho mais velho de Finarfin, irmão de Orodreth, Angrod, Aegnor e Galadriel. É o primeiro dos Noldor a encontrar os Homens em Beleriand, e o único entre os grandes senhores a ter se tornado amigo deles. Foi o fundador de Nargothrond e de Minas Tirith, a torre vigia da ilha de Tol Sirion, e tem uma ligação especial com os Edain, principalmente com a Casa de Bëor. Quando Barahir lhe salva a vida na Dagor-nuin-Giliath, Finrod jura ajudar sua casa para sempre. Ao cumprir a promessa diante de Beren, abre mão da coroa, parte numa missão quase impossível e é capturado por Sauron em Tol-in-Gaurhoth. Ali, em combate de cantos contra o Senhor dos Lobisomens, resiste até o último momento, e morre nas masmorras matando um lobo com as próprias mãos, para que Beren pudesse viver.",
+        imagem : "finrod.jpg",
+        lugares : ["tolsirion", "nargothrond"]
+    }
 }
 
 const app = document.getElementById("app");
