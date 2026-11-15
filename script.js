@@ -3,14 +3,15 @@ const lugares = {
         nome : "Menegroth",
         tipo : "Cidade",
         descricao : "\"As Mil Cavernas\", salões ocultos de Thingol e Melian no rio de Esgalduin em Doriath. Os pilares de Menegroth eram entalhados à semelhanças das faias de Oromë, tronco, galho e folha e iluminado com lanternas de ouro. Aquela era a mais bela habitação de qualquer rei a jamais existir a leste do Mar.",
-        x: 62, y: 34.5, icone: "nomemenegroth.png", largura: 90
+        x: 62, y: 34.5, icone: "nomemenegroth.png", largura: 90,
+        personagens : []
     },
     gondolin: {
         nome : "Gondolin",
         tipo : "Cidade",
         descricao : "\"A Rocha Oculta\", cidade secreta do Rei Turgon, protegida pelas Montanhas Circundantes (Echoriath).",
         x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78,
-        personagens : ["fingolfin"]
+        personagens : ["turgon", "fingolfin", "aredhel"]
     },
     dorlómin: {
         nome : "Dor-lómin",
@@ -30,19 +31,21 @@ const lugares = {
         tipo : "Cidade",
         descricao : "<strong>\"A grande fortaleza subterrânea do rio Narog\"</strong>, fundada por Finrod Felagund e destruída por Glaurung; também o reino de Nargothrond, que se estendia a leste e a oeste do Narog.",
         x: 39.1, y: 48.3, icone: "nomenargothrond.png", largura: 90,
-        personagens : ["turin"]
+        personagens : ["turin", "finrod"]
     },
     tolsirion : {
         nome : "Tol Sirion",
         tipo : "Cidade",
         descricao : "Ilha no rio, perto do Passo do Sirion, na qual Finrod construiu a torre de Minas Tirith; depois de ser tomada por Sauron, recebeu o nome de Tol-in-Gaurhoth.",
-        x: 43.2, y: 22.2, icone: "nometolsirion.png", largura: 50
+        x: 43.2, y: 22.2, icone: "nometolsirion.png", largura: 50,
+        personagens : ["finrod"]
     },
     vinyamar : {
         nome : "Vinyamar",
         tipo : "Cidade",
         descricao : "A casa de Turgon em Nevrast sob o Monte Taras. O significado é provavelmente \"Nova Morada\".",
-        x: 13.2, y: 32.8, icone: "nomevinyamar.png", largura: 87
+        x: 13.2, y: 32.8, icone: "nomevinyamar.png", largura: 87,
+        personagens : ["turgon", "aredhel", "cirdan"]
     },
     amonrûdh : {
         nome : "Amon Rûdh",
@@ -80,21 +83,65 @@ const personagens = {
         nome : "Fingolfin",
         raca : "Elfo Noldo",
         quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
-        descricao : "<strong>Fingolfin</strong> é o segundo filho de Finwë, o mais velho dos meios-irmãos de Fëanor, pai de Fingon, Turgon, Aredhel e Argon, e esposo de Anairë. Foi o líder da hoste que atravessou o Helcaraxë, o Gelo Moedor, quando Fëanor queimou os navios em Losgar e deixou para trás aqueles que o seguiram. Guardou o cerco de Angband por quase quatrocentos anos, e é o último grande senhor a ostentar a unidade dos Noldor exilados; Alto Rei dos Noldor em Beleriand, habitando Hithlum; morto por Morgoth em combate singular.",
-        imagem : "fingolfin.jpg",
-        lugares : ["hithlum", "dorlómin", "gondolin"]
+        descricao : "",
+        imagem : "fingolfin.jpeg",
+        lugares : ["hithlum", "dorlómin", "gondolin"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
     },
 
     feanor : {
         nome : "Fëanor",
         raca : "Elfo Noldo",
         quote : "Belo há de ser o fim, ainda que longa e dura haja de ser a estrada!",
-        descricao : "<strong>Fëanor</strong> é o filho mais velho de Finwë (filho único de Finwë e Míriel), meio-irmão de Fingolfin e Finarfin,; o maior dos Noldor e líder de sua rebelião; inventor da escrita fëanoriana; criador das Silmarils; foi morto em Mithrim durante a Dagor-nuin-Giliath. Seu nome era <i>Curufinwë</i> (<i>curu</i> \"engenho\"), e ele deu o mesmo nome ao seu quinto filho, Curufin; mas ele próprio era conhecido pelo nome que sua mãe lhe deu, <i>Fëanáro</i> \"Espírito de Fogo\", que recebeu a forma sindarin <i>Fëanor</i>.",
+        descricao : "",
         imagem : "feanor.jpg",
-        lugares : ["hithlum"]
+        lugares : ["hithlum"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
     },
 
-    
+    turgon : {
+        nome : "Turgon",
+        raca : "Elfo Noldo",
+        quote : 'Grande é a queda de Gondolin, e a glória de meu povo jamais será esquecida! Contudo, eu não desferirei mais golpe algum em fuga... Sus! Aqui permaneço, e com a minha cidade hei de cair!',
+        descricao : '',
+        imagem : "turgon.jpg",
+        lugares : ["vinyamar", "gondolin"]
+    },
+
+    finrod : {
+        nome : "Finrod Felagund",
+        raca : "Elfo Noldo",
+        quote : "Um juramento também hei de fazer, e devo estar livre para cumpri-lo e adentrar a escuridão. Nem nada de meu reino há de durar para que um filho possa herdá-lo.",
+        descricao : "",
+        imagem : "finrod.jpeg",
+        lugares : ["tolsirion", "nargothrond"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+
+    aredhel : {
+        nome : "Aredhel, a Branca",
+        raca : "Elfa Noldo",
+        quote : "Sou tua irmã, e não tua serviçal, e fora de teus grilhões seguirei como me parecer bom. E, se me recusas uma escolta, então irei sozinha.",
+        descricao : "",
+        imagem : "aredhel.png",
+        lugares : ["vinyamar", "gondolin"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+
+    cirdan : {
+        nome : 'Círdan "O Armador"',
+        raca : "Elfo Sindar",
+        quote : "Toma agora este Anel, pois teus labores e teus cuidados serão pesados, mas em tudo ele há de te apoiar e te defender do cansaço.",
+        descricao : "",
+        imagem : "cirdan.jpeg",
+        lugares : ["vinyamar"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    }
 }
 
 const app = document.getElementById("app");
@@ -108,20 +155,23 @@ app.innerHTML = `
         <button id="fechar" class="fechar" title="Fechar">✕</button>
         <div id="painel-rolagem" class="painel-rolagem">
             <img id="painel-imagem" class="painel-imagem" alt="">
-            <section class="painel-texto">
-                <h2 id="painel-titulo"></h2>
-                <p id="painel-tipo"></p>
-                <blockquote id="painel-quote" class="quote" hidden></blockquote>
-                <p id="painel-descricao"></p>
-            </section>
-            <section id="painel-lugares" class="relacionados" hidden>
-                <h3>Lugares</h3>
-                <div id="lista-lugares" class="relacionados-lista"></div>
-            </section>
-            <section id="painel-personagens" class="relacionados" hidden>
-                <h3>Personagens</h3>
-                <div id="lista-personagens" class="relacionados-lista"></div>
-            </section>
+            <div class="painel-corpo">
+                <p id="painel-credito" class="painel-credito" hidden></p>
+                <section class="painel-texto">
+                    <h2 id="painel-titulo"></h2>
+                    <p id="painel-tipo"></p>
+                    <blockquote id="painel-quote" class="quote" hidden></blockquote>
+                    <p id="painel-descricao"></p>
+                </section>
+                <section id="painel-lugares" class="relacionados" hidden>
+                    <h3>Lugares</h3>
+                    <div id="lista-lugares" class="relacionados-lista"></div>
+                </section>
+                <section id="painel-personagens" class="relacionados" hidden>
+                    <h3>Personagens</h3>
+                    <div id="lista-personagens" class="relacionados-lista"></div>
+                </section>
+            </div>
         </div>
     </aside>
 `;
@@ -171,11 +221,17 @@ function trocarConteudo(preencher) {
 }
 
 function mostrarImagem(src) {
+    const rolagem = document.getElementById("painel-rolagem");
     const img = document.getElementById("painel-imagem");
+
+    rolagem.classList.remove("sem-imagem");
     img.hidden = false;
-    img.onerror = () => { img.hidden = true; };
+    img.onerror = () => {
+        img.hidden = true;
+        rolagem.classList.add("sem-imagem");   // sem imagem, o corpo não faz o corte
+    };
     img.src = src;
-    document.getElementById("painel-rolagem").scrollTop = 0;
+    rolagem.scrollTop = 0;
 }
 
 function mostrarFrase(texto) {
@@ -227,6 +283,8 @@ function abrirPainel(id) {
             abrirPersonagem
         );
         montarRelacionados("painel-lugares", "lista-lugares", [], lugares, () => "", abrirPainel);
+        
+    mostrarCredito(lugar.credito, lugar.creditoLink);
     });
 }
 
@@ -246,6 +304,8 @@ function abrirPersonagem(pid) {
             abrirPainel
         );
         montarRelacionados("painel-personagens", "lista-personagens", [], personagens, () => "", abrirPersonagem);
+        
+        mostrarCredito(p.credito, p.creditoLink);
     });
 }
 
@@ -253,3 +313,26 @@ document.getElementById("fechar").addEventListener("click", () => {
     clearTimeout(temporizador);
     painel.classList.remove("aberto");
 });
+
+function mostrarCredito(nome, link) {
+    const el = document.getElementById("painel-credito");
+    el.textContent = "";
+
+    if (!nome) {
+        el.hidden = true;
+        return;
+    }
+
+    el.append("por ");
+    if (link) {
+        const a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = nome;
+        el.appendChild(a);
+    } else {
+        el.append(nome);
+    }
+    el.hidden = false;
+}
