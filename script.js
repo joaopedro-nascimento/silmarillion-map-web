@@ -4,7 +4,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "\"As Mil Cavernas\", salões ocultos de Thingol e Melian no rio de Esgalduin em Doriath. Os pilares de Menegroth eram entalhados à semelhanças das faias de Oromë, tronco, galho e folha e iluminado com lanternas de ouro. Aquela era a mais bela habitação de qualquer rei a jamais existir a leste do Mar.",
         x: 62, y: 34.5, icone: "nomemenegroth.png", largura: 90,
-        personagens : []
+        personagens : ["galadriel"]
     },
     gondolin: {
         nome : "Gondolin",
@@ -59,7 +59,7 @@ const lugares = {
         tipo : "Região",
         descricao : "\"Terra da Bruma\", a região cuja divisa a leste e a sul são as Ered Wedthrin e no oeste são as Ered Lómin. Era uma terra bela enquanto o Cerco de Angband durou, embora seu ar fosse fresco e o inverno ali fosse frio.",
         x: 27.4, y: 11.6, icone: "nomehithlum.png", largura: 240,
-        personagens : ["fingolfin", "feanor"]
+        personagens : ["fingolfin", "feanor", "galadriel"]
     },
     quedadosirion : {
         nome : "Queda do Sirion",
@@ -139,6 +139,17 @@ const personagens = {
         descricao : "",
         imagem : "cirdan.jpeg",
         lugares : ["vinyamar"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+
+    galadriel : {
+        nome : "Galadriel",
+        raca : "Elfa Noldo",
+        quote : "Que te seja uma luz nos lugares escuros, quando todas as outras luzes se apagam. Recorda Galadriel e seu espelho!",
+        descricao : "",
+        imagem : "galadriel.jpeg",
+        lugares : ["menegroth", "hithlum"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     }
