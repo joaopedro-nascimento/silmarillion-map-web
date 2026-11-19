@@ -217,7 +217,7 @@ const personagens = {
         raca : "Elfo Noldo",
         quote : "",
         descricao : "",
-        imagem : "gilgalad.jpeg",
+        imagem : "gilgalad.png",
         lugares : [],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
@@ -381,6 +381,8 @@ function abrirPainel(id) {
 }
 
 function abrirPersonagem(pid) {
+    if (typeof fecharCartao === "function") fecharCartao();
+
     trocarConteudo(() => {
         const p = personagens[pid];
         document.getElementById("painel-titulo").textContent = p.nome;
