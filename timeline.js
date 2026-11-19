@@ -236,6 +236,9 @@ function preencherCartao(ev) {
 }
 
 function selecionarEvento(ev) {
+    clearTimeout(temporizador);
+    painel.classList.remove("aberto");
+    
     eventoAtivo = ev;
     marcarAtivo();
     destacarLugares(ev.lugares);

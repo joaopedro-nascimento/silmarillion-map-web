@@ -221,6 +221,16 @@ const personagens = {
         lugares : [],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
+    },
+    ulmo : {
+        nome : "Ulmo",
+        raca : "Vala",
+        quote : "Em verdade, a Água agora se tornou mais bela do que o meu coração imaginara, nem meu pensamento secreto concebera o floco de neve, nem em toda a minha música estava contido o cair da chuva. Buscarei Manwë, para que ele e eu possamos fazer melodias para sempre para teu deleite!",
+        descricao : "",
+        imagem : "ulmo.jpeg",
+        lugares : [],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
     }
 }
 
@@ -348,6 +358,8 @@ function montarRelacionados(secaoId, listaId, ids, fonte, caminhoImagem, aoClica
 }
 
 function abrirPainel(id) {
+    if(typeof fecharCartao === "function") fecharCartao();
+    
     trocarConteudo(() => {
         const lugar = lugares[id];
         document.getElementById("painel-titulo").textContent = lugar.nome;
