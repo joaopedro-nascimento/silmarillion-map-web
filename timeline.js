@@ -17,6 +17,7 @@ const eventos = {
         ano : 455,
         resumo : '"A Batalha das Chamas Repentinas", quarta das grandes batalhas das Guerras de Beleriand.',
         descricao : "",
+        imagem : "bragollach.jpg",
         lugares : ["hithlum", "himring", "gondolin"],
         personagens : ["fingolfin"]
     },
@@ -26,8 +27,9 @@ const eventos = {
         ano : 472,
         resumo : '"Lágrimas Inumeráveis", o nome dado à ruinosa quinta batalha das Guerras de Beleriand.',
         descricao : "",
-        lugares : ["dorlómin", "hithlum", "gondolin"],
-        personagens: []
+        imagem : "nirnaeth.webp",
+        lugares : ["eithelsirion", "baradeithel", "dorthonion", "anfauglith", "angband", "pantanodeserech", "montedolmed", "haudhen-Ndengin"],
+        personagens: ["fingon", "turgon", "maedhros", "maglor", "gwindor", "gelmir", "ecthelion", "glorfindel", "mablung", "beleg", "hurin", "huor", "haldir", "elfang", "azaghâl", "morgoth", "gothmog", "glaurung"]
     },
 
     quedanargothrond : {

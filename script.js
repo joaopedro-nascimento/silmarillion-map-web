@@ -4,7 +4,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "\"As Mil Cavernas\", salões ocultos de Thingol e Melian no rio de Esgalduin em Doriath. Os pilares de Menegroth eram entalhados à semelhanças das faias de Oromë, tronco, galho e folha e iluminado com lanternas de ouro. Aquela era a mais bela habitação de qualquer rei a jamais existir a leste do Mar.",
         x: 62, y: 34.5, icone: "nomemenegroth.png", largura: 90,
-        personagens : ["galadriel"]
+        personagens : ["galadriel", "melian", "celegorm", "beleg"]
     },
     gondolin: {
         nome : "Gondolin",
@@ -24,14 +24,15 @@ const lugares = {
         nome : "Himring",
         tipo : "Cidade",
         descricao : "O grande monte a oeste da Brecha de Maglor na qual ficava a fortaleza de Maedhros; traduzido no texto como \"Sempre-frio\".",
-        x: 74.6, y: 19, icone: "nomehimring.png", largura: 90
+        x: 74.6, y: 19, icone: "nomehimring.png", largura: 90,
+        personagens : ["celegorm"]
     },
     nargothrond : {
         nome : "Nargothrond",
         tipo : "Cidade",
         descricao : "<strong>\"A grande fortaleza subterrânea do rio Narog\"</strong>, fundada por Finrod Felagund e destruída por Glaurung; também o reino de Nargothrond, que se estendia a leste e a oeste do Narog.",
         x: 39.1, y: 48.3, icone: "nomenargothrond.png", largura: 90,
-        personagens : ["turin", "finrod", "glaurung"]
+        personagens : ["turin", "finrod", "glaurung", "celegorm"]
     },
     tolsirion : {
         nome : "Tol Sirion",
@@ -59,13 +60,20 @@ const lugares = {
         tipo : "Região",
         descricao : "\"Terra da Bruma\", a região cuja divisa a leste e a sul são as Ered Wedthrin e no oeste são as Ered Lómin. Era uma terra bela enquanto o Cerco de Angband durou, embora seu ar fosse fresco e o inverno ali fosse frio.",
         x: 27.4, y: 11.6, icone: "nomehithlum.png", largura: 240,
-        personagens : ["fingolfin", "feanor", "galadriel"]
+        personagens : ["fingolfin", "feanor", "galadriel", "fingon", "celegorm"]
     },
     quedadosirion : {
         nome : "Queda do Sirion",
         tipo : "Cidade",
         descricao : "Onde o \"O Grande Rio\" que corria de norte a sul e dividia Beleriand Oeste e Beleriand Leste mergulhava no fundo da terra com grande estrondo.",
         x: 43, y: 57.2, icone: "nomequedasdosirion.png", largura: 100
+    },
+    baradnimras : {
+        nome : "Barad Nimras",
+        tipo : "Torre",
+        descricao : '"Torre do Chifre Branco", erigida por Finrod Felagund no cabo a oeste de Eglarest.',
+        x: 17.8, y: 57.6, icone: "nomebaradnimras.png", largura: 120,
+        personagens : ["finrod"]
     }
 };
 
@@ -116,7 +124,7 @@ const personagens = {
         quote : "Um juramento também hei de fazer, e devo estar livre para cumpri-lo e adentrar a escuridão. Nem nada de meu reino há de durar para que um filho possa herdá-lo.",
         descricao : "",
         imagem : "finrod.jpeg",
-        lugares : ["tolsirion", "nargothrond"],
+        lugares : ["tolsirion", "nargothrond", "baradnimras"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     },
@@ -161,6 +169,56 @@ const personagens = {
         descricao : "",
         imagem : "glaurung.jpeg",
         lugares : ["nargothrond"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    fingon : {
+        nome : "Fingon",
+        raca : "Elfo Noldo",
+        quote : "Ó Rei a quem todas as aves são caras, dai força agora às penas desta flecha e achai alguma misericórdia para os Noldor em seu apuro!",
+        descricao : "",
+        imagem : "fingon.jpeg",
+        lugares : ["hithlum"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    melian : {
+        nome : "Melian",
+        raca : "Maia",
+        quote : "Suas espadas e seus conselhos hão de ter dois gumes.",
+        descricao : "",
+        imagem : "melian.jpeg",
+        lugares : ["menegroth"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    celegorm : {
+        nome : "Celegorm, o alvo",
+        raca : "Elfo Noldo",
+        quote : "Seja amigo ou inimigo, seja demônio de Morgoth, ou Elfo, ou filho dos Homens, ou qualquer outra coisa viva em Arda, nem lei, nem laço, nem liga infernal, nem força dos Valar, nem poder algum de feitiçaria há de defendê-lo do ódio perseguidor dos filhos de Fëanor, se ele tomar ou achar uma Silmaril e a mantiver. Pois as Silmarils apenas nós reivindicamos até que o mundo finde.",
+        descricao : "",
+        imagem : "celegorm.jpeg",
+        lugares : ["himring", "nargothrond", "menegroth"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    beleg : {
+        nome : "Beleg Arcoforte",
+        raca : "Elfo Sindar",
+        quote : "Buscarei Túrin até encontrá-lo e vou trazê-lo de volta a Menegroth, se puder; pois o amo também.",
+        descricao : "",
+        imagem : "beleg.jpeg",
+        lugares : ["menegroth"],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    gilgalad : {
+        nome : "Gil-Galad",
+        raca : "Elfo Noldo",
+        quote : "",
+        descricao : "",
+        imagem : "gilgalad.jpeg",
+        lugares : [],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     }
