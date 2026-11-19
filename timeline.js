@@ -11,17 +11,15 @@ const eventos = {
         lugares: ["hithlum"],
         personagens: ["fingolfin"]
     },
-
     bragollach: {
         nome : "Dagor Bragollach",
         ano : 455,
         resumo : '"A Batalha das Chamas Repentinas", quarta das grandes batalhas das Guerras de Beleriand.',
         descricao : "",
         imagem : "bragollach.jpg",
-        lugares : ["hithlum", "himring", "gondolin"],
-        personagens : ["fingolfin"]
+        lugares : ["ardgalen", "thangorodrim", "angband", "dorthonion", "eredwethrin", "hithlum", "eithelsirion", "passodosirion", "pantanodeserech", "himring", "lothlann", "rerir", "thargelion", "passodoaglon"],
+        personagens : ["fingolfin", "morgoth", "glaurung", "angrod", "aegnor", "finrod", "fingon", "turgon", "gilgalad", "maedhros", "maglor", "celegorm", "curufin", "caranthir", "amrod", "amras", "bregolas", "barahir", "hador", "gundor", "galdor", "thorondor"]
     },
-
     nirnaeth: {
         nome : "Nirnaeth Arnoediad",
         ano : 472,
@@ -31,7 +29,6 @@ const eventos = {
         lugares : ["eithelsirion", "baradeithel", "dorthonion", "anfauglith", "angband", "pantanodeserech", "montedolmed", "haudhen-Ndengin"],
         personagens: ["fingon", "turgon", "maedhros", "maglor", "gwindor", "gelmir", "ecthelion", "glorfindel", "mablung", "beleg", "hurin", "huor", "haldir", "elfang", "azaghâl", "morgoth", "gothmog", "glaurung"]
     },
-
     quedanargothrond : {
         nome : "Saque de Nargothrond",
         ano : 495,
@@ -40,7 +37,6 @@ const eventos = {
         lugares : ["nargothrond", ],
         personagens : ["turin"]
     },
-
     quedagondolin: {
         nome: "A queda de Gondolin",
         ano: 511,
