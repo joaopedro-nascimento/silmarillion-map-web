@@ -48,6 +48,15 @@ const eventos = {
         descricao: "",
         lugares: ["gondolin"],
         personagens: []
+    },
+    dagoraglareb: {
+        nome: "Dagor Aglareb",
+        ano: 60,
+        resumo: '"A Batalha Gloriosa", terceira das grandes batalhas das Guerras de Beleriand.',
+        descricao: "A <strong>Dagor Aglareb</strong> (“Batalha Gloriosa”) foi a terceira grande batalha das Guerras de Beleriand. Morgoth, achando que os Noldor estavam descuidados, atacou com Orques vindos de Ard-galen, mas Fingolfin e Maedhros, vigilantes, esmagaram a hoste principal de ambos os lados e a perseguiram até a vista de Angband, destruindo-a por completo. A vitória deu início ao Cerco de Angband, que durou cerca de quatrocentos anos do Sol.",
+        imagem : "dagoraglareb.webp",
+        lugares : ["angband", "ardgalen", "dorthonion", "passodosirion", "montanhasazuis"],
+        personagens : ["morgoth", "fingolfin", "maedhros", "maglor"]
     }
 };
 
