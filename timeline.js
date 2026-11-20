@@ -46,6 +46,17 @@ const eventos = {
         lugares : ["eithelsirion", "baradeithel", "dorthonion", "anfauglith", "angband", "pantanodeserech", "montedolmed", "haudhen-Ndengin"],
         personagens: ["fingon", "turgon", "maedhros", "maglor", "gwindor", "gelmir", "ecthelion", "glorfindel", "mablung", "beleg", "hurin", "huor", "haldir", "elfang", "azaghâl", "morgoth", "gothmog", "glaurung"]
     },
+    tuornasce : {
+        nome : "Tuor nasce",
+        ano : 472,
+        resumo : "",
+        descricao : "Tuor nasceu de sua mãe Rían e seu pai Huor e cresceu em Androth.",
+        imagem : "tuor.jpeg",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 21",
+        lugares : ["mithrim"],
+        personagens : ["tuor"]
+    },
     quedanargothrond : {
         nome : "Saque de Nargothrond",
         ano : 495,
@@ -56,6 +67,19 @@ const eventos = {
         capitulo : "cap. 11",
         lugares : ["nargothrond"],
         personagens : ["turin", "orodreth", "gelmir", "arminas", "gwindor", "finduilas", "glaurung"]
+    },
+    tuorevoronwe : {
+        nome : "Encontro de Tuor e Voronwë",
+        ano : 495,
+        resumo : "Após a tempestade em Vinyamar, Tuor encontra Voronwë que aceita guiá-lo a Gondolin.",
+        descricao : "",
+        imagem : "tuor_e_voronwe.jpeg",
+        credito : "tintalles",
+        creditoLink : "https://x.com/tintalles",
+        livro : "A Queda de Gondolin",
+        capitulo : "A Última Versão",
+        lugares : ["vinyamar", "nevrast"],
+        personagens : ["tuor", "voronwe", "ulmo"]
     },
     quedagondolin: {
         nome: "A queda de Gondolin",
