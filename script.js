@@ -11,7 +11,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "\"A Rocha Oculta\", cidade secreta do Rei Turgon, protegida pelas Montanhas Circundantes (Echoriath).",
         x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78,
-        personagens : ["turgon", "fingolfin", "aredhel", "tuor", "glorfindel"]
+        personagens : ["turgon", "fingolfin", "aredhel", "tuor", "glorfindel", "voronwe"]
     },
     dorlómin: {
         nome : "Dor-lómin",
@@ -46,7 +46,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "A casa de Turgon em Nevrast sob o Monte Taras. O significado é provavelmente \"Nova Morada\".",
         x: 13.2, y: 32.8, icone: "nomevinyamar.png", largura: 87,
-        personagens : ["turgon", "aredhel", "cirdan", "tuor", "ulmo"]
+        personagens : ["turgon", "aredhel", "cirdan", "tuor", "ulmo", "voronwe"]
     },
     amonrûdh : {
         nome : "Amon Rûdh",
@@ -261,6 +261,14 @@ const personagens = {
         lugares : ["gondolin"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
+    },
+    voronwe : {
+        nome : "Voronwë",
+        raca : "Elfo Noldo",
+        quote : "Alae! Ered en Echoriath, ered e.mbar nín!",
+        descricao : "",
+        imagem : "voronwe.jpeg",
+        lugares : ["gondolin", "nevrast", "vinyamar", "nantathrin", "balar", "fozdosirion"]
     }
 }
 
