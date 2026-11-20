@@ -74,6 +74,27 @@ const lugares = {
         descricao : '"Torre do Chifre Branco", erigida por Finrod Felagund no cabo a oeste de Eglarest.',
         x: 17.8, y: 57.6, icone: "nomebaradnimras.png", largura: 120,
         personagens : ["finrod"]
+    },
+    dorthonion : {
+        nome : "Taur-Nu-Fuin (Dorthonion)",
+        tipo : "Região",
+        descricao : '"Terra de Pinheiros", os grandes planaltos cobertos de florestas na fronteira norte de Beleriand, depois chamados de Taur-nu-Fuin.',
+        x: 56.78, y: 21, icone: "nomedorthonion.png", largura: 189,
+        personagens : ["angrod", "aegnor", "finrod", "boromir", "bregolas", "barahir", "beren", "baragund", "belegund", "radhruin", "dairuin", "dagnir", "ragnor", "gildor", "gorlim", "arthad", "urthel", "hathaldir"]
+    },
+    falas : {
+        nome : "Falas",
+        tipo : "Região",
+        descricao : "As costas do oeste de Beleriand, ao sul de Nevrast.",
+        x: 21.7, y: 53.4, icone: "nomefalas.png", largura: 256,
+        personagens : ["cirdan", "finrod", "gilgalad"]
+    },
+    mithrim : {
+        nome : "Mithrim",
+        tipo : "Região",
+        descricao : "A região em volta do grande lago do leste de Hithlum.",
+        x: 38.7, y: 17.3, icone: "nomemithrim.png", largura: 120,
+        personagens : ["feanor", "celegorm", "maedhros", "caranthir", "fingolfin", "finrod", "fingon", "thorondor", "angrod", "rian", "tuor"]
     }
 };
 
