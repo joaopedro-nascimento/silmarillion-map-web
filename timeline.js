@@ -1,15 +1,25 @@
 const ANO_MIN = 1;
 const ANO_MAX = 590;
 const PX_POR_ANO = 5;
+const ICONE_LIVRO = `<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19.5A2 2 0 0 1 6 18h13"/></svg>`;
+const ICONE_DATA  = `<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`;
+
+function htmlFonte(ev) {
+    const data = `<span class="fonte-item">${ICONE_DATA}${ev.ano} P.E.</span>`;
+    if (!ev.livro) return data;
+    const cap = ev.capitulo ? ` ${ev.capitulo}` : "";
+    return `${data}<span class="fonte-sep">◆</span>
+            <span class="fonte-item">${ICONE_LIVRO}<em>${ev.livro}</em>${cap}</span>`;
+}
 
 const eventos = {
-    lammoth : {
-        nome : "Batalha de Lammoth",
+    nascerdosol : {
+        nome : "O Primeiro Nascer do Sol",
         ano : 1,
-        resumo : "Logo após Fingolfin e seu exército chegarem à Terra-média, foi travada uma batalha em Lammoth contra os Orcs da região.",
+        resumo : "A luz do Sol revela Beleriand, e os Homens despertam em Hildórien.",
         descricao : "",
-        lugares: ["hithlum"],
-        personagens: ["fingolfin"]
+        lugares : [""],
+        personagens : ["", ""]
     },
     bragollach: {
         nome : "Dagor Bragollach",
@@ -17,31 +27,40 @@ const eventos = {
         resumo : '"A Batalha das Chamas Repentinas", quarta das grandes batalhas das Guerras de Beleriand.',
         descricao : "",
         imagem : "bragollach.jpg",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 18",
         lugares : ["ardgalen", "thangorodrim", "angband", "dorthonion", "eredwethrin", "hithlum", "eithelsirion", "passodosirion", "pantanodeserech", "himring", "lothlann", "rerir", "thargelion", "passodoaglon"],
         personagens : ["fingolfin", "morgoth", "glaurung", "angrod", "aegnor", "finrod", "fingon", "turgon", "gilgalad", "maedhros", "maglor", "celegorm", "curufin", "caranthir", "amrod", "amras", "bregolas", "barahir", "hador", "gundor", "galdor", "thorondor"]
     },
     nirnaeth: {
         nome : "Nirnaeth Arnoediad",
         ano : 472,
-        resumo : '"Lágrimas Inumeráveis", o nome dado à ruinosa quinta batalha das Guerras de Beleriand.',
+        resumo : '"Lágrimas Inumeráveis", a ruinosa quinta batalha das Guerras de Beleriand.',
         descricao : "",
-        imagem : "nirnaeth.webp",
+        imagem : "",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 20",
         lugares : ["eithelsirion", "baradeithel", "dorthonion", "anfauglith", "angband", "pantanodeserech", "montedolmed", "haudhen-Ndengin"],
         personagens: ["fingon", "turgon", "maedhros", "maglor", "gwindor", "gelmir", "ecthelion", "glorfindel", "mablung", "beleg", "hurin", "huor", "haldir", "elfang", "azaghâl", "morgoth", "gothmog", "glaurung"]
     },
     quedanargothrond : {
         nome : "Saque de Nargothrond",
         ano : 495,
-        resumo : "A grande fortaleza subterrânea do Rio Narog fundada por Finrod Felagund é destruída por Glaurung.",
+        resumo : "A grande fortaleza subterrânea do Rio Narog é destruída por Glaurung.",
         descricao : "",
+        imagem : "",
+        livro : "Os Filhos de Húrin",
+        capitulo : "cap. 11",
         lugares : ["nargothrond", ],
         personagens : ["turin"]
     },
     quedagondolin: {
         nome: "A queda de Gondolin",
         ano: 511,
-        resumo: "Morgoth descobre o refúgio secreto de Turgon e lança sobre Gondolin Orques, Balrogs e dragões. A cidade oculta é destruída.",
+        resumo: "A cidade oculta é destruída.",
         descricao: "",
+        imagem : "",
+        livro : "A Queda de Gondolin",
         lugares: ["gondolin"],
         personagens: []
     },
@@ -281,6 +300,9 @@ function abrirEvento(id) {
     trocarConteudo(() => {
         document.getElementById("painel-titulo").textContent = ev.nome;
         document.getElementById("painel-tipo").textContent = `Evento · Ano ${ev.ano} da Primeira Era`;
+        const fonte = document.getElementById("painel-fonte");
+        fonte.innerHTML = htmlFonte(ev);
+        fonte.hidden = false;
         document.getElementById("painel-descricao").innerHTML = ev.descricao;
         mostrarFrase(ev.quote);
         mostrarImagem(`imagens/eventos/${ev.imagem || id + ".jpg"}`);

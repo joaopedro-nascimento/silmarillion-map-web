@@ -260,6 +260,7 @@ app.innerHTML = `
                 <section class="painel-texto">
                     <h2 id="painel-titulo"></h2>
                     <p id="painel-tipo"></p>
+                    <p id="painel-fonte" class="fonte" hidden></p>
                     <blockquote id="painel-quote" class="quote" hidden></blockquote>
                     <p id="painel-descricao"></p>
                 </section>
@@ -369,6 +370,7 @@ function montarRelacionados(secaoId, listaId, ids, fonte, caminhoImagem, aoClica
 
 function abrirPainel(id) {
     if(typeof fecharCartao === "function") fecharCartao();
+    document.getElementById("painel-fonte").hidden = true;
     
     trocarConteudo(() => {
         const lugar = lugares[id];
@@ -392,6 +394,7 @@ function abrirPainel(id) {
 
 function abrirPersonagem(pid) {
     if (typeof fecharCartao === "function") fecharCartao();
+    document.getElementById("painel-fonte").hidden = true;
 
     trocarConteudo(() => {
         const p = personagens[pid];

@@ -253,3 +253,30 @@
 .ponto-texto.destaque {
     box-shadow: 0 0 12px rgba(255, 200, 60, 0.95);
 }
+
+.fonte,
+.tl-cartao-fonte {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.85em;
+    line-height: 1.4;
+    opacity: 0.85;
+}
+
+.tl-cartao-fonte { justify-content: center; }
+
+.fonte[hidden] { display: none; }
+
+.fonte-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.fonte-sep {
+    font-size: 0.6em;
+    opacity: 0.6;
+}
