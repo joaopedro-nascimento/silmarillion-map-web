@@ -25,7 +25,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "O grande monte a oeste da Brecha de Maglor na qual ficava a fortaleza de Maedhros; traduzido no texto como \"Sempre-frio\".",
         x: 74.6, y: 19, icone: "nomehimring.png", largura: 90,
-        personagens : ["celegorm"]
+        personagens : ["celegorm", "maglor"]
     },
     nargothrond : {
         nome : "Nargothrond",
@@ -60,7 +60,7 @@ const lugares = {
         tipo : "Região",
         descricao : "\"Terra da Bruma\", a região cuja divisa a leste e a sul são as Ered Wedthrin e no oeste são as Ered Lómin. Era uma terra bela enquanto o Cerco de Angband durou, embora seu ar fosse fresco e o inverno ali fosse frio.",
         x: 27.4, y: 11.6, icone: "nomehithlum.png", largura: 240,
-        personagens : ["fingolfin", "feanor", "galadriel", "fingon", "celegorm"]
+        personagens : ["fingolfin", "feanor", "galadriel", "fingon", "celegorm", "gilgalad"]
     },
     quedadosirion : {
         nome : "Queda do Sirion",
@@ -215,10 +215,10 @@ const personagens = {
     gilgalad : {
         nome : "Gil-Galad",
         raca : "Elfo Noldo",
-        quote : "",
+        quote : "Ai da fraqueza dos grandes! Pois um rei poderoso é Gil-galad, e sábio em todo conhecimento é Mestre Elrond; e, contudo, não me querem auxiliar em meus labores.",
         descricao : "",
         imagem : "gilgalad.png",
-        lugares : [],
+        lugares : ["hithlum", "brithombar", "eglarest", "balar", "fozesdosirion"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     },
@@ -229,6 +229,16 @@ const personagens = {
         descricao : "",
         imagem : "ulmo.jpeg",
         lugares : [],
+        credito : "elendilions",
+        creditoLink : "https://x.com/elendilions"
+    },
+    maglor : {
+        nome : "Maglor",
+        raca : "Elfo Noldo",
+        quote : "O juramento não diz que não possamos aguardar o tempo propício, e pode ser que em Valinor tudo seja perdoado e esquecido, e que hajamos de receber o que é nosso em paz.",
+        descricao : "",
+        imagem : "maglor.jpeg",
+        lugares : ["ivrin", "brechademaglor", "himring", "montedolmed"],
         credito : "elendilions",
         creditoLink : "https://x.com/elendilions"
     }
