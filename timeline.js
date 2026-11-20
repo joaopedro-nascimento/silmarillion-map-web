@@ -2,14 +2,11 @@ const ANO_MIN = 1;
 const ANO_MAX = 590;
 const PX_POR_ANO = 5;
 const ICONE_LIVRO = `<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19.5A2 2 0 0 1 6 18h13"/></svg>`;
-const ICONE_DATA  = `<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`;
 
 function htmlFonte(ev) {
-    const data = `<span class="fonte-item">${ICONE_DATA}${ev.ano} P.E.</span>`;
-    if (!ev.livro) return data;
+    if (!ev || !ev.livro) return "";
     const cap = ev.capitulo ? ` ${ev.capitulo}` : "";
-    return `${data}<span class="fonte-sep">◆</span>
-            <span class="fonte-item">${ICONE_LIVRO}<em>${ev.livro}</em>${cap}</span>`;
+    return `<span class="fonte-item">${ICONE_LIVRO}<em>${ev.livro}</em>${cap}</span>`;
 }
 
 const eventos = {
@@ -113,7 +110,7 @@ timelineEl.id = "timeline";
 timelineEl.className = "timeline";
 timelineEl.innerHTML = `
     <div id="tl-cartao" class="tl-cartao" role="dialog" aria-label="Evento">
-        <button class="tl-cartao-fechar" title="Fechar">✕</button>
+        <button type="button" class="tl-cartao-fechar" title="Fechar">✕</button>
         <div class="tl-cartao-imagem" hidden></div>
         <h2 class="tl-cartao-nome"></h2>
         <p class="tl-cartao-ano"></p>
@@ -121,11 +118,16 @@ timelineEl.innerHTML = `
             <span class="tl-cartao-resumo"></span>
             <a href="#" class="tl-cartao-mais">Mais…</a>
         </p>
+        <div class="tl-cartao-nav" hidden>
+            <button type="button" class="tl-cartao-seta tl-cartao-anterior" title="Evento anterior do mesmo ano">‹</button>
+            <span class="tl-cartao-contador"></span>
+            <button type="button" class="tl-cartao-seta tl-cartao-proximo" title="Próximo evento do mesmo ano">›</button>
+        </div>
     </div>
     <div class="tl-indicador">
-        <button class="tl-seta tl-seta-anterior" title="Evento anterior">‹</button>
+        <button type="button" class="tl-seta tl-seta-anterior" title="Evento anterior">‹</button>
         <span class="tl-indicador-ano" id="tl-ano-atual">${ANO_MIN}</span>
-        <button class="tl-seta tl-seta-proximo" title="Próximo evento">›</button>
+        <button type="button" class="tl-seta tl-seta-proximo" title="Próximo evento">›</button>
     </div>
     <div class="tl-trilho" id="tl-trilho">
         <div class="tl-conteudo" id="tl-conteudo"></div>
@@ -133,13 +135,35 @@ timelineEl.innerHTML = `
 `;
 document.body.appendChild(timelineEl);
 
-const trilho     = document.getElementById("tl-trilho");
-const conteudo   = document.getElementById("tl-conteudo");
-const rotuloAno  = document.getElementById("tl-ano-atual");
-const cartao     = document.getElementById("tl-cartao");
+const trilho    = document.getElementById("tl-trilho");
+const conteudo  = document.getElementById("tl-conteudo");
+const rotuloAno = document.getElementById("tl-ano-atual");
+const cartao    = document.getElementById("tl-cartao");
 
 let eventoAtivo = null;
+let eventosDoAnoAtual = [];
+let indiceNoAno = 0;
 let temporizadorCartao = null;
+
+function obterEventosDoAno(ano) {
+    return eventosOrdenados.filter(e => e.ano === ano);
+}
+
+function eventoAtualDoCartao() {
+    return eventosDoAnoAtual[indiceNoAno] || eventoAtivo;
+}
+
+function atualizarNavegacaoAno() {
+    const nav = cartao.querySelector(".tl-cartao-nav");
+    const contador = cartao.querySelector(".tl-cartao-contador");
+
+    if (eventosDoAnoAtual.length > 1) {
+        contador.textContent = `${indiceNoAno + 1} / ${eventosDoAnoAtual.length}`;
+        nav.hidden = false;
+    } else {
+        nav.hidden = true;
+    }
+}
 
 function criar(classe, tag = "div") {
     const el = document.createElement(tag);
@@ -259,7 +283,8 @@ timelineEl.querySelector(".tl-seta-proximo").addEventListener("click", () => irP
 function preencherCartao(ev) {
     cartao.querySelector(".tl-cartao-nome").textContent = ev.nome;
     cartao.querySelector(".tl-cartao-ano").textContent = `Ano ${ev.ano} da Primeira Era`;
-    cartao.querySelector(".tl-cartao-resumo").textContent = ev.resumo;
+    cartao.querySelector(".tl-cartao-resumo").textContent = ev.resumo || ev.descricao || "";
+    atualizarNavegacaoAno();
 
     const circulo = cartao.querySelector(".tl-cartao-imagem");
     circulo.hidden = true;
@@ -269,7 +294,8 @@ function preencherCartao(ev) {
         const src = `imagens/eventos/${ev.imagem}`;
         const teste = new Image();
         teste.onload = () => {
-            if (eventoAtivo && eventoAtivo.id === ev.id) {
+            const atual = eventoAtualDoCartao();
+            if (atual && atual.id === ev.id) {
                 circulo.style.backgroundImage = `url("${src}")`;
                 circulo.hidden = false;
                 cartao.classList.add("com-imagem");
@@ -279,42 +305,52 @@ function preencherCartao(ev) {
     }
 }
 
-function selecionarEvento(ev) {
-    clearTimeout(temporizador);
-    painel.classList.remove("aberto");
-    
+function mudarEventoNoAno(delta) {
+    if (eventosDoAnoAtual.length <= 1) return;
+    indiceNoAno = (indiceNoAno + delta + eventosDoAnoAtual.length) % eventosDoAnoAtual.length;
+    const ev = eventosDoAnoAtual[indiceNoAno];
     eventoAtivo = ev;
     marcarAtivo();
     destacarLugares(ev.lugares);
-    irParaAno(ev.ano);
+    preencherCartao(ev);
+}
+
+function selecionarEvento(ev) {
+    if (typeof temporizador !== "undefined") clearTimeout(temporizador);
+    if (typeof painel !== "undefined") painel.classList.remove("aberto");
+
+    eventosDoAnoAtual = obterEventosDoAno(ev.ano);
+    const idx = eventosDoAnoAtual.findIndex(item => item.id === ev.id);
+    indiceNoAno = idx >= 0 ? idx : 0;
+
+    eventoAtivo = eventosDoAnoAtual[indiceNoAno];
+    marcarAtivo();
+    destacarLugares(eventoAtivo.lugares);
+    irParaAno(eventoAtivo.ano);
 
     clearTimeout(temporizadorCartao);
-    const mostrar = () => {
-        preencherCartao(ev);
-        cartao.classList.add("aberto");
-    };
-
-    if (cartao.classList.contains("aberto")) {
-        cartao.classList.remove("aberto");
-        temporizadorCartao = setTimeout(mostrar, 300);
-    } else {
-        mostrar();
-    }
+    preencherCartao(eventoAtivo);
+    cartao.classList.add("aberto");
 }
 
 function fecharCartao() {
     clearTimeout(temporizadorCartao);
     eventoAtivo = null;
+    eventosDoAnoAtual = [];
+    indiceNoAno = 0;
     marcarAtivo();
     destacarLugares([]);
     cartao.classList.remove("aberto");
 }
 
 cartao.querySelector(".tl-cartao-fechar").addEventListener("click", fecharCartao);
+cartao.querySelector(".tl-cartao-anterior").addEventListener("click", () => mudarEventoNoAno(-1));
+cartao.querySelector(".tl-cartao-proximo").addEventListener("click", () => mudarEventoNoAno(1));
 
 cartao.querySelector(".tl-cartao-mais").addEventListener("click", e => {
     e.preventDefault();
-    if (eventoAtivo) abrirEvento(eventoAtivo.id);
+    const alvo = eventoAtualDoCartao();
+    if (alvo) abrirEvento(alvo.id);
 });
 
 function destacarLugares(ids = []) {
@@ -325,16 +361,24 @@ function destacarLugares(ids = []) {
 
 function abrirEvento(id) {
     const ev = eventos[id];
+    if (!ev) return;
 
     trocarConteudo(() => {
         document.getElementById("painel-titulo").textContent = ev.nome;
         document.getElementById("painel-tipo").textContent = `Evento · Ano ${ev.ano} da Primeira Era`;
         const fonte = document.getElementById("painel-fonte");
         fonte.innerHTML = htmlFonte(ev);
-        fonte.hidden = false;
-        document.getElementById("painel-descricao").innerHTML = ev.descricao;
+        fonte.hidden = !fonte.innerHTML;
+        document.getElementById("painel-descricao").innerHTML = ev.descricao || ev.resumo || "";
         mostrarFrase(ev.quote);
-        mostrarImagem(`imagens/eventos/${ev.imagem || id + ".jpg"}`);
+        if (ev.imagem) {
+            mostrarImagem(`imagens/eventos/${ev.imagem}`);
+        } else {
+            const rolagem = document.getElementById("painel-rolagem");
+            const img = document.getElementById("painel-imagem");
+            img.hidden = true;
+            rolagem.classList.add("sem-imagem");
+        }
         if (typeof mostrarCredito === "function") mostrarCredito(ev.credito, ev.creditoLink);
 
         montarRelacionados(

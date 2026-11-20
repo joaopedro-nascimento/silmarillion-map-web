@@ -25,7 +25,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "O grande monte a oeste da Brecha de Maglor na qual ficava a fortaleza de Maedhros; traduzido no texto como \"Sempre-frio\".",
         x: 74.6, y: 19, icone: "nomehimring.png", largura: 90,
-        personagens : ["celegorm", "maglor"]
+        personagens : ["celegorm", "maglor", "maedhros"]
     },
     nargothrond : {
         nome : "Nargothrond",
@@ -80,7 +80,7 @@ const lugares = {
         tipo : "Região",
         descricao : '"Terra de Pinheiros", os grandes planaltos cobertos de florestas na fronteira norte de Beleriand, depois chamados de Taur-nu-Fuin.',
         x: 56.78, y: 21, icone: "nomedorthonion.png", largura: 189,
-        personagens : ["angrod", "aegnor", "finrod", "boromir", "bregolas", "barahir", "beren", "baragund", "belegund", "radhruin", "dairuin", "dagnir", "ragnor", "gildor", "gorlim", "arthad", "urthel", "hathaldir"]
+        personagens : ["angrod", "aegnor", "finrod", "boromir", "bregolas", "barahir", "beren", "baragund", "belegund", "radhruin", "dairuin", "dagnir", "ragnor", "gildor", "gorlim", "arthad", "urthel", "hathaldir", "maedhros"]
     },
     falas : {
         nome : "Falas",
@@ -98,200 +98,261 @@ const lugares = {
     }
 };
 
-const personagens = {
-    turin : {
-        nome : "Túrin Turambar",
-        raca : "Homem",
-        quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
-        descricao : "",
-        imagem : "turin.jpg",
-        lugares : ["dorlómin", "nargothrond", "amonrûdh"]
-    },
-
+const familias = {
     fingolfin : {
-        nome : "Fingolfin",
-        raca : "Elfo Noldo",
-        quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
+        nome : "Casa de Fingolfin",
         descricao : "",
-        imagem : "fingolfin.jpeg",
-        lugares : ["hithlum", "dorlómin", "gondolin"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            fingolfin : {
+                nome : "Fingolfin",
+                raca : "Elfo Noldo",
+                quote : "Assim ele chegou sozinho aos portões de Angband, e soou sua trompa, e golpeou, mais uma vez, as portas brônzeas, e desafiou Morgoth a vir para fora para combate singular. E Morgoth veio.",
+                descricao : "",
+                imagem : "fingolfin.jpeg",
+                lugares : ["hithlum", "dorlómin", "gondolin"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            fingon : {
+                nome : "Fingon",
+                raca : "Elfo Noldo",
+                quote : "Ó Rei a quem todas as aves são caras, dai força agora às penas desta flecha e achai alguma misericórdia para os Noldor em seu apuro!",
+                descricao : "",
+                imagem : "fingon.jpeg",
+                lugares : ["hithlum"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            turgon : {
+                nome : "Turgon",
+                raca : "Elfo Noldo",
+                quote : 'Grande é a queda de Gondolin, e a glória de meu povo jamais será esquecida! Contudo, eu não desferirei mais golpe algum em fuga... Sus! Aqui permaneço, e com a minha cidade hei de cair!',
+                descricao : '',
+                imagem : "",
+                lugares : ["vinyamar", "gondolin"]
+            },
+            aredhel : {
+                nome : "Aredhel, a Branca",
+                raca : "Elfa Noldo",
+                quote : "Sou tua irmã, e não tua serviçal, e fora de teus grilhões seguirei como me parecer bom. E, se me recusas uma escolta, então irei sozinha.",
+                descricao : "",
+                imagem : "aredhel.png",
+                lugares : ["vinyamar", "gondolin"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            gilgalad : {
+                nome : "Gil-Galad",
+                raca : "Elfo Noldo",
+                quote : "Ai da fraqueza dos grandes! Pois um rei poderoso é Gil-galad, e sábio em todo conhecimento é Mestre Elrond; e, contudo, não me querem auxiliar em meus labores.",
+                descricao : "",
+                imagem : "gilgalad.png",
+                lugares : ["hithlum", "brithombar", "eglarest", "balar", "fozesdosirion"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
+ 
     feanor : {
-        nome : "Fëanor",
-        raca : "Elfo Noldo",
-        quote : "Belo há de ser o fim, ainda que longa e dura haja de ser a estrada!",
+        nome : "Casa de Fëanor",
         descricao : "",
-        imagem : "feanor.jpg",
-        lugares : ["hithlum"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            feanor : {
+                nome : "Fëanor",
+                raca : "Elfo Noldo",
+                quote : "Belo há de ser o fim, ainda que longa e dura haja de ser a estrada!",
+                descricao : "",
+                imagem : "feanor.jpg",
+                lugares : ["hithlum"],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            maedhros: {
+                nome : "Maedhros, o alto",
+                raca : "Elfo Noldo",
+                quote : "Se não houvesse desavença alguma entre nós, senhor, ainda assim a realeza, por direito, caberia a vós, o mais velho aqui da casa de Finwë, e não o menos sábio.",
+                descricao : "",
+                imagem : "maedhros.jpg",
+                lugares : ["angband", "mithrim", "himring", "marcademaedhros", "ivrin", "dorthonion", "anfauglith", "ossiriand", "amonereb", "doriath"],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            maglor : {
+                nome : "Maglor, o grande cantor",
+                raca : "Elfo Noldo",
+                quote : "O juramento não diz que não possamos aguardar o tempo propício, e pode ser que em Valinor tudo seja perdoado e esquecido, e que hajamos de receber o que é nosso em paz.",
+                descricao : "",
+                imagem : "maglor.jpg",
+                lugares : ["ivrin", "brechademaglor", "himring", "montedolmed"],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            celegorm : {
+                nome : "Celegorm, o alvo",
+                raca : "Elfo Noldo",
+                quote : "Seja amigo ou inimigo, seja demônio de Morgoth, ou Elfo, ou filho dos Homens, ou qualquer outra coisa viva em Arda, nem lei, nem laço, nem liga infernal, nem força dos Valar, nem poder algum de feitiçaria há de defendê-lo do ódio perseguidor dos filhos de Fëanor, se ele tomar ou achar uma Silmaril e a mantiver. Pois as Silmarils apenas nós reivindicamos até que o mundo finde.",
+                descricao : "",
+                imagem : "celegorm.jpeg",
+                lugares : ["himring", "nargothrond", "menegroth"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
-    turgon : {
-        nome : "Turgon",
-        raca : "Elfo Noldo",
-        quote : 'Grande é a queda de Gondolin, e a glória de meu povo jamais será esquecida! Contudo, eu não desferirei mais golpe algum em fuga... Sus! Aqui permaneço, e com a minha cidade hei de cair!',
-        descricao : '',
-        imagem : "turgon.jpg",
-        lugares : ["vinyamar", "gondolin"]
-    },
-
-    finrod : {
-        nome : "Finrod Felagund",
-        raca : "Elfo Noldo",
-        quote : "Um juramento também hei de fazer, e devo estar livre para cumpri-lo e adentrar a escuridão. Nem nada de meu reino há de durar para que um filho possa herdá-lo.",
+ 
+    finarfin : {
+        nome : "Casa de Finarfin",
         descricao : "",
-        imagem : "finrod.jpeg",
-        lugares : ["tolsirion", "nargothrond", "baradnimras"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            finrod : {
+                nome : "Finrod Felagund",
+                raca : "Elfo Noldo",
+                quote : "Um juramento também hei de fazer, e devo estar livre para cumpri-lo e adentrar a escuridão. Nem nada de meu reino há de durar para que um filho possa herdá-lo.",
+                descricao : "",
+                imagem : "finrod.jpg",
+                lugares : ["tolsirion", "nargothrond", "baradnimras"],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            galadriel : {
+                nome : "Galadriel",
+                raca : "Elfa Noldo",
+                quote : "Que te seja uma luz nos lugares escuros, quando todas as outras luzes se apagam. Recorda Galadriel e seu espelho!",
+                descricao : "",
+                imagem : "galadriel.jpeg",
+                lugares : ["menegroth", "hithlum"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
-    aredhel : {
-        nome : "Aredhel, a Branca",
-        raca : "Elfa Noldo",
-        quote : "Sou tua irmã, e não tua serviçal, e fora de teus grilhões seguirei como me parecer bom. E, se me recusas uma escolta, então irei sozinha.",
+ 
+    gondolin : {
+        nome : "Povo de Gondolin",
         descricao : "",
-        imagem : "aredhel.png",
-        lugares : ["vinyamar", "gondolin"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            glorfindel : {
+                nome : "Glorfindel",
+                raca : "Elfo Noldo",
+                quote : 'Ainda dizem os Eldar quando veem uma bela luta com grande disparidade de forças contra uma fúria maligna: "Ai de nós! É Glorfindel contra o Balrog", e seus corações ainda estão feridos por causa daquele belo homem dos Noldor.',
+                descricao : "",
+                imagem : "glorfindel.jpeg",
+                lugares : ["gondolin"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            voronwe : {
+                nome : "Voronwë",
+                raca : "Elfo Noldo",
+                quote : "Alae! Ered en Echoriath, ered e.mbar nín!",
+                descricao : "",
+                imagem : "voronwe.jpeg",
+                lugares : ["gondolin", "nevrast", "vinyamar", "nantathrin", "balar", "fozdosirion"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
-    cirdan : {
-        nome : 'Círdan "O Armador"',
-        raca : "Elfo Sindar",
-        quote : "Toma agora este Anel, pois teus labores e teus cuidados serão pesados, mas em tudo ele há de te apoiar e te defender do cansaço.",
+ 
+    hador : {
+        nome : "Casa de Hador",
         descricao : "",
-        imagem : "cirdan.jpeg",
-        lugares : ["vinyamar"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            turin : {
+                nome : "Túrin Turambar",
+                raca : "Homem",
+                quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
+                descricao : "",
+                imagem : "",
+                lugares : ["dorlómin", "nargothrond", "amonrûdh"]
+            },
+            tuor : {
+                nome : "Tuor",
+                raca : "Homem",
+                quote : "Gondolin ainda resiste e Ulmo não permitirá que pereça!",
+                descricao : "",
+                imagem : "tuor.jpeg",
+                lugares : ["mithrim", "dorlómin", "nevrast", "vinyamar", "ivrin", "dimbar", "gondolin", "fozdosirion"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
-    galadriel : {
-        nome : "Galadriel",
-        raca : "Elfa Noldo",
-        quote : "Que te seja uma luz nos lugares escuros, quando todas as outras luzes se apagam. Recorda Galadriel e seu espelho!",
+ 
+    sindar : {
+        nome : "Sindar e Doriath",
         descricao : "",
-        imagem : "galadriel.jpeg",
-        lugares : ["menegroth", "hithlum"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        personagens : {
+            cirdan : {
+                nome : 'Círdan "O Armador"',
+                raca : "Elfo Sindar",
+                quote : "Toma agora este Anel, pois teus labores e teus cuidados serão pesados, mas em tudo ele há de te apoiar e te defender do cansaço.",
+                descricao : "",
+                imagem : "cirdan.jpeg",
+                lugares : ["vinyamar"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            beleg : {
+                nome : "Beleg Arcoforte",
+                raca : "Elfo Sindar",
+                quote : "Buscarei Túrin até encontrá-lo e vou trazê-lo de volta a Menegroth, se puder; pois o amo também.",
+                descricao : "",
+                imagem : "beleg.jpeg",
+                lugares : ["menegroth"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            melian : {
+                nome : "Melian",
+                raca : "Maia",
+                quote : "Suas espadas e seus conselhos hão de ter dois gumes.",
+                descricao : "",
+                imagem : "melian.jpeg",
+                lugares : ["menegroth"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     },
-
-    glaurung : {
-        nome : "Glaurung, Pai de Dragões",
-        raca : "Dragão",
-        quote : "Filho adotivo ingrato, proscrito, matador de teu amigo, ladrão de amor, usurpador de Nargothrond, capitão imprudente e desertor de tua família.",
+ 
+    poderes : {
+        nome : "Valar e Servos de Morgoth",
         descricao : "",
-        imagem : "glaurung.jpeg",
-        lugares : ["nargothrond"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    fingon : {
-        nome : "Fingon",
-        raca : "Elfo Noldo",
-        quote : "Ó Rei a quem todas as aves são caras, dai força agora às penas desta flecha e achai alguma misericórdia para os Noldor em seu apuro!",
-        descricao : "",
-        imagem : "fingon.jpeg",
-        lugares : ["hithlum"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    melian : {
-        nome : "Melian",
-        raca : "Maia",
-        quote : "Suas espadas e seus conselhos hão de ter dois gumes.",
-        descricao : "",
-        imagem : "melian.jpeg",
-        lugares : ["menegroth"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    celegorm : {
-        nome : "Celegorm, o alvo",
-        raca : "Elfo Noldo",
-        quote : "Seja amigo ou inimigo, seja demônio de Morgoth, ou Elfo, ou filho dos Homens, ou qualquer outra coisa viva em Arda, nem lei, nem laço, nem liga infernal, nem força dos Valar, nem poder algum de feitiçaria há de defendê-lo do ódio perseguidor dos filhos de Fëanor, se ele tomar ou achar uma Silmaril e a mantiver. Pois as Silmarils apenas nós reivindicamos até que o mundo finde.",
-        descricao : "",
-        imagem : "celegorm.jpeg",
-        lugares : ["himring", "nargothrond", "menegroth"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    beleg : {
-        nome : "Beleg Arcoforte",
-        raca : "Elfo Sindar",
-        quote : "Buscarei Túrin até encontrá-lo e vou trazê-lo de volta a Menegroth, se puder; pois o amo também.",
-        descricao : "",
-        imagem : "beleg.jpeg",
-        lugares : ["menegroth"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    gilgalad : {
-        nome : "Gil-Galad",
-        raca : "Elfo Noldo",
-        quote : "Ai da fraqueza dos grandes! Pois um rei poderoso é Gil-galad, e sábio em todo conhecimento é Mestre Elrond; e, contudo, não me querem auxiliar em meus labores.",
-        descricao : "",
-        imagem : "gilgalad.png",
-        lugares : ["hithlum", "brithombar", "eglarest", "balar", "fozesdosirion"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    ulmo : {
-        nome : "Ulmo",
-        raca : "Vala",
-        quote : "Em verdade, a Água agora se tornou mais bela do que o meu coração imaginara, nem meu pensamento secreto concebera o floco de neve, nem em toda a minha música estava contido o cair da chuva. Buscarei Manwë, para que ele e eu possamos fazer melodias para sempre para teu deleite!",
-        descricao : "",
-        imagem : "ulmo.jpeg",
-        lugares : ["vinyamar"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    maglor : {
-        nome : "Maglor",
-        raca : "Elfo Noldo",
-        quote : "O juramento não diz que não possamos aguardar o tempo propício, e pode ser que em Valinor tudo seja perdoado e esquecido, e que hajamos de receber o que é nosso em paz.",
-        descricao : "",
-        imagem : "maglor.jpg",
-        lugares : ["ivrin", "brechademaglor", "himring", "montedolmed"],
-        credito : "talyris",
-        creditoLink : "https://www.tumblr.com/talyris"
-    },
-    tuor : {
-        nome : "Tuor",
-        raca : "Homem",
-        quote : "Gondolin ainda resiste e Ulmo não permitirá que pereça!",
-        descricao : "",
-        imagem : "tuor.jpeg",
-        lugares : ["mithrim", "dorlómin", "nevrast", "vinyamar", "ivrin", "dimbar", "gondolin", "fozdosirion"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    glorfindel : {
-        nome : "Glorfindel",
-        raca : "Elfo Noldo",
-        quote : 'Ainda dizem os Eldar quando veem uma bela luta com grande disparidade de forças contra uma fúria maligna: "Ai de nós! É Glorfindel contra o Balrog", e seus corações ainda estão feridos por causa daquele belo homem dos Noldor.',
-        descricao : "",
-        imagem : "glorfindel.jpeg",
-        lugares : ["gondolin"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
-    },
-    voronwe : {
-        nome : "Voronwë",
-        raca : "Elfo Noldo",
-        quote : "Alae! Ered en Echoriath, ered e.mbar nín!",
-        descricao : "",
-        imagem : "voronwe.jpeg",
-        lugares : ["gondolin", "nevrast", "vinyamar", "nantathrin", "balar", "fozdosirion"]
+        personagens : {
+            ulmo : {
+                nome : "Ulmo",
+                raca : "Vala",
+                quote : "Em verdade, a Água agora se tornou mais bela do que o meu coração imaginara, nem meu pensamento secreto concebera o floco de neve, nem em toda a minha música estava contido o cair da chuva. Buscarei Manwë, para que ele e eu possamos fazer melodias para sempre para teu deleite!",
+                descricao : "",
+                imagem : "ulmo.jpeg",
+                lugares : ["vinyamar"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            glaurung : {
+                nome : "Glaurung, Pai de Dragões",
+                raca : "Dragão",
+                quote : "Filho adotivo ingrato, proscrito, matador de teu amigo, ladrão de amor, usurpador de Nargothrond, capitão imprudente e desertor de tua família.",
+                descricao : "",
+                imagem : "glaurung.jpeg",
+                lugares : ["nargothrond"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
     }
-}
+};
+
+const personagens = Object.fromEntries(
+    Object.entries(familias).flatMap(([chaveFamilia, familia]) =>
+        Object.entries(familia.personagens).map(([chave, personagem]) => [
+            chave,
+            { ...personagem, familia : chaveFamilia }
+        ])
+    )
+);
 
 const app = document.getElementById("app");
 

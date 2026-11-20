@@ -268,6 +268,40 @@
 
 .tl-cartao-fonte { justify-content: center; }
 
+.tl-cartao-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0.9rem 0 0;
+    font-size: 0.85em;
+}
+
+.tl-cartao-nav[hidden] {
+    display: none;
+}
+
+.tl-cartao-seta {
+    border: 1px solid rgba(139, 107, 61, 0.5);
+    background: rgba(245, 236, 218, 0.7);
+    color: inherit;
+    border-radius: 4px;
+    padding: 0.15rem 0.55rem;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.2;
+}
+
+.tl-cartao-seta:hover {
+    color: #7a1f0a;
+    border-color: #8b6b3d;
+}
+
+.tl-cartao-contador {
+    font-variant-numeric: tabular-nums;
+    opacity: 0.8;
+}
+
 .fonte[hidden] { display: none; }
 
 .fonte-item {
