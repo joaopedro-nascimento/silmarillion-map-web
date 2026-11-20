@@ -86,7 +86,7 @@ const lugares = {
         nome : "Falas",
         tipo : "Região",
         descricao : "As costas do oeste de Beleriand, ao sul de Nevrast.",
-        x: 21.7, y: 53.4, icone: "nomefalas.png", largura: 256,
+        x: 21, y: 52.3, icone: "nomefalas.png", largura: 310, rotacao: 41,
         personagens : ["cirdan", "finrod", "gilgalad"]
     },
     mithrim : {
@@ -258,10 +258,10 @@ const personagens = {
         raca : "Elfo Noldo",
         quote : "O juramento não diz que não possamos aguardar o tempo propício, e pode ser que em Valinor tudo seja perdoado e esquecido, e que hajamos de receber o que é nosso em paz.",
         descricao : "",
-        imagem : "maglor.jpeg",
+        imagem : "maglor.jpg",
         lugares : ["ivrin", "brechademaglor", "himring", "montedolmed"],
-        credito : "elendilions",
-        creditoLink : "https://x.com/elendilions"
+        credito : "talyris",
+        creditoLink : "https://www.tumblr.com/talyris"
     },
     tuor : {
         nome : "Tuor",
