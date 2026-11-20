@@ -95,6 +95,20 @@ const lugares = {
         descricao : "A região em volta do grande lago do leste de Hithlum.",
         x: 38.7, y: 17.3, icone: "nomemithrim.png", largura: 120,
         personagens : ["feanor", "celegorm", "maedhros", "caranthir", "fingolfin", "finrod", "fingon", "thorondor", "angrod", "rian", "tuor"]
+    },
+    balar : {
+        nome : "Ilha de Balar",
+        tipo : "Ilha",
+        descricao : "Ilha na baía de Balar, que diziam ser a ponta leste de Tol Eressëa que se quebrou, onde Círdan e Gil-galad habitaram depois das Nirnaeth Arnoediad.",
+        x: 32, y: 93, icone: "nomebalar.png", largura: 95, rotacao : -17,
+        personagens : ["osse", "cirdan", "gilgalad"]
+    },
+    nevrast : {
+        nome: "Nevrast",
+        tipo : "Região",
+        descricao : "A região a oeste de Dor-lómin, além das Ered Lómin, onde Turgon habitava antes de sua partida para Gondolin.",
+        x: 18, y: 27.9, icone: "nomenevrast.png", largura: 135, rotacao : -26,
+        personagens : ["turgon", "ulmo", "osse", "aredhel", "voronwe", "tuor", "idril"]
     }
 };
 
@@ -129,7 +143,7 @@ const familias = {
                 quote : 'Grande é a queda de Gondolin, e a glória de meu povo jamais será esquecida! Contudo, eu não desferirei mais golpe algum em fuga... Sus! Aqui permaneço, e com a minha cidade hei de cair!',
                 descricao : '',
                 imagem : "",
-                lugares : ["vinyamar", "gondolin"]
+                lugares : ["vinyamar", "gondolin", "nevrast"]
             },
             aredhel : {
                 nome : "Aredhel, a Branca",
@@ -137,7 +151,7 @@ const familias = {
                 quote : "Sou tua irmã, e não tua serviçal, e fora de teus grilhões seguirei como me parecer bom. E, se me recusas uma escolta, então irei sozinha.",
                 descricao : "",
                 imagem : "aredhel.png",
-                lugares : ["vinyamar", "gondolin"],
+                lugares : ["vinyamar", "gondolin", "nevrast"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
@@ -248,7 +262,7 @@ const familias = {
                 quote : "Alae! Ered en Echoriath, ered e.mbar nín!",
                 descricao : "",
                 imagem : "voronwe.jpeg",
-                lugares : ["gondolin", "nevrast", "vinyamar", "nantathrin", "balar", "fozdosirion"],
+                lugares : ["gondolin", "nevrast", "vinyamar", "nantathrin", "fozdosirion"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
             }
@@ -327,7 +341,7 @@ const familias = {
                 quote : "Em verdade, a Água agora se tornou mais bela do que o meu coração imaginara, nem meu pensamento secreto concebera o floco de neve, nem em toda a minha música estava contido o cair da chuva. Buscarei Manwë, para que ele e eu possamos fazer melodias para sempre para teu deleite!",
                 descricao : "",
                 imagem : "ulmo.jpeg",
-                lugares : ["vinyamar"],
+                lugares : ["vinyamar", "nevrast"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
