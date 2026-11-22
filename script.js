@@ -162,6 +162,62 @@ const lugares = {
 };
 
 const familias = {
+    valinor : {
+        nome : "Elfos em Valinor",
+        descricao : "",
+        personagens : {
+            finwe : {
+                nome : "Finwë",
+                raca : "Elfo Noldo",
+                quote : "Decerto há cura em Aman? Aqui todo cansaço pode achar repouso.",
+                descricao : "",
+                imagem : "finwe.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            findis : {
+                nome : "Findis",
+                raca : "Elfo Noldo",
+                quote : "",
+                descricao : "Findis é a primogênita de Finwë e Indis, filha mais velha do segundo casamento do rei dos Noldor. Seu nome é um amálgama dos nomes dos pais (Finwë + Indis).",
+                imagem : "findis.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            irime : {
+                nome : "Írimë",
+                raca : "Elfa Noldo",
+                quote : "",
+                descricao : 'Írimë (também chamada Írien, com nome-materno Lalwendë, "donzela risonha", e conhecida como Lalwen) é a filha mais nova de Finwë e Indis. Foi para o exílio com seu irmão Fingolfin, de quem era muito próxima.',
+                imagem : "irime.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            miriel : {
+                nome : "Míriel Serindë",
+                raca : "Elfa Noldo",
+                quote : "Vim até aqui para escapar do corpo e não desejo jamais retornar a ele.",
+                descricao : 'Míriel Serindë ("a Bordadeira") foi a primeira esposa de Finwë e mãe de Fëanor. Era famosa pela habilidade soberba com agulhas e tecelagem, superior à de qualquer outro entre os Noldor. Consumida em espírito e corpo ao dar à luz Fëanor, desejou repouso, passou aos salões de Mandos e jamais retornou.',
+                imagem : "miriel.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            nerdanel : {
+                nome : "Nerdanel",
+                raca : "Elfa Noldo",
+                quote : "Não vais ficar com todos eles. Pelo menos um jamais pisará na Terra-média.",
+                descricao : "Nerdanel é a esposa de Fëanor e mãe de seus sete filhos. Filha do ferreiro Mahtan, era forte, de mente livre e sedenta de conhecimento. Era mais lenta e paciente que Fëanor, e afastou-se dele quando seus feitos a entristeceram.",
+                imagem : "nerdanel.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            }
+        }
+    },
     fingolfin : {
         nome : "Casa de Fingolfin",
         descricao : "",
@@ -308,6 +364,16 @@ const familias = {
         nome : "Casa de Finarfin",
         descricao : "",
         personagens : {
+            earwen : {
+                nome : "Ëarwen",
+                raca : "Elfa Teleri",
+                quote : "",
+                descricao : 'Conhecida como "a donzela-cisne de Alqualondë", Eärwen é a filha do Rei Olwë, senhor dos elfos Teleri, e sobrinha do Rei Thingol de Doriath. Desposando Finarfin, ela uniu a casa real dos Teleri à Terceira Casa dos Noldor e teve filhos ilustres, entre eles Finrod, Galadriel e Angrod. Sua linhagem e laços afetivos tiveram peso decisivo na história dos Exilados: motivaram o arrependimento e o retorno de Finarfin a Valinor após o Fratricídio contra o povo dela, levaram Anairë (esposa de Fingolfin) a permanecer em Aman por amizade a ela e garantiram aos seus filhos permissão e trânsito livre no reino protegido de Thingol, na Terra-média.',
+                imagem : "earwen.jpeg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
             finrod : {
                 nome : "Finrod Felagund",
                 raca : "Elfo Noldo",
@@ -389,7 +455,7 @@ const familias = {
                 lugares : ["mithrim", "dorlómin", "nevrast", "vinyamar", "ivrin", "dimbar", "gondolin", "fozdosirion"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
-            }
+            },
         }
     },
  
@@ -402,7 +468,7 @@ const familias = {
                 raca : "Elfo Sindar",
                 quote : "Toma agora este Anel, pois teus labores e teus cuidados serão pesados, mas em tudo ele há de te apoiar e te defender do cansaço.",
                 descricao : "",
-                imagem : "cirdan.jpeg",
+                imagem : "cirdan.jpg",
                 lugares : ["vinyamar", "brithombar", "eglarest"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
@@ -461,6 +527,46 @@ const familias = {
                 descricao : "",
                 imagem : "ulmo.jpeg",
                 lugares : ["vinyamar", "nevrast"],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            orome : {
+                nome : "Oromë",
+                raca : "Vala",
+                quote : "E Oromë, domador de feras, cavalgava também, de quando em vez, na escuridão das florestas não iluminadas;",
+                descricao : "",
+                imagem : "orome.jpeg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            manwe : {
+                nome : "Manwë",
+                raca : "Vala",
+                quote : "Este reino não hás de tomar para ti injustamente, pois muitos outros labutaram aqui não menos do que tu.",
+                descricao : "",
+                imagem : "manwe.webp",
+                lugares : [""],
+                credito : "alba_r_art",
+                creditoLink : "https://www.instagram.com/alba_r_art"
+            },
+            aule : {
+                nome : "Aulë",
+                raca : "Vala",
+                quote : "Que Eru abençoe minha obra e a corrija!",
+                descricao : "",
+                imagem : "aule.jpg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            uinen : {
+                nome : "Uinen",
+                raca : "Maia",
+                quote : "",
+                descricao : 'Conhecida como a "senhora dos mares", Uinen é a esposa de Ossë e um espírito ligado às águas. Dotada de uma natureza ao mesmo tempo afetuosa e implacável, ela revelou o poder destrutivo de seu luto durante o Fratricídio em Alqualondë, quando suas lágrimas pelos marinheiros mortos fizeram o mar se erguer em fúria para afundar os navios dos Noldor.',
+                imagem : "uinen.jpg",
+                lugares : [""],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
