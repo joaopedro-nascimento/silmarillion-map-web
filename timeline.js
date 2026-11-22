@@ -78,6 +78,19 @@ const eventos = {
         lugares : ["vinyamar", "nevrast"],
         personagens : ["tuor", "voronwe", "ulmo"]
     },
+    maglorelrondelros: {
+        nome: "Cativeiro de Elros e Elrond",
+        ano: 538,
+        resumo: "Maglor mantém Elros e Elrond em cativeiro.",
+        descricao: "Capturados após o saque das Fozes do Sirion, Elrond e Elros foram poupados da morte. Cansado do fardo de seu juramento, Maglor sentiu piedade dos gêmeos, acolhendo-os e criando-os com um afeto inesperado.",
+        imagem : "maglorelrondelros.jpg",
+        credito : "tintalles",
+        creditoLink : "https://x.com/tintalles",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 24 ",
+        lugares: ["amonereb"],
+        personagens: ["maglor", "elrond", "elros"]
+    },
     quedagondolin: {
         nome: "A queda de Gondolin",
         ano: 511,

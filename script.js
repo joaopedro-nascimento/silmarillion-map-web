@@ -282,10 +282,10 @@ const familias = {
                 raca : "Elfo Noldo",
                 quote : "Belo há de ser o fim, ainda que longa e dura haja de ser a estrada!",
                 descricao : "",
-                imagem : "feanor.jpg",
+                imagem : "feanor.png",
                 lugares : ["hithlum", "lammoth"],
-                credito : "talyris",
-                creditoLink : "https://www.tumblr.com/talyris"
+                credito : "moredhel",
+                creditoLink : "https://www.tumblr.com/moredhel"
             },
             maedhros: {
                 nome : "Maedhros, o alto",
@@ -579,6 +579,89 @@ const familias = {
                 lugares : ["nargothrond", "tumhalad"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
+    },
+
+    istari : {
+        nome : "Magos Istari",
+        descricao : "",
+        personagens : {
+            gandalf : {
+                nome : "Gandalf",
+                raca : "Maia Istari",
+                quote : "Mas a decisão não é nossa. Tudo o que temos de decidir é o que fazer com o tempo que nos é dado. E, Frodo, nosso tempo já está começando a ficar negro. O Inimigo está se tornando muito forte. Seus planos ainda não estão amadurecidos, eu acho, mas estão amadurecendo. Será muito difícil para nós. Já seria, mesmo se não fosse por esse acaso terrível.",
+                descricao : "Gandalf (também chamado de Olórin ou Mithrandir) é um Maia associado a Irmo, Manwë e Varda que foi o último dos cinco Istari enviados à Terra-média para combater Sauron. Diferente da ambição dominadora de Saruman, sua atuação baseava-se no conselho próximo aos Elfos e aos Homens, na empatia e na compreensão das vontades individuais, postura que o tornava completamente incompreensível e imprevisível para a mente cínica de Sauron, que o subestimava como alguém sem propósito dominante.",
+                imagem : "gandalf.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            saruman : {
+                nome : "Saruman",
+                raca : "Maia Istari",
+                quote : "Bem capaz e posso ir além de uma maldadezinha. Vocês me fizeram rir, seus senhorinhos-hobbits, cavalgando em companhia de todas aquelas grandes pessoas, tão seguros e tão satisfeitos consigo mesmos.",
+                descricao : "Saruman (também chamado de Curumo ou Curunír, e conhecido como Saruman, o Branco ou Saruman de Muitas Cores) é um Maia ligado a Aulë — partilhando com ele e com Sauron o apreço pela ordem, pelo domínio e pela técnica — que chegou primeiro à Terra-média e se tornou o chefe dos Istari e do Conselho Branco. Movido pelo orgulho, pela impaciência e pela cobiça do Um Anel, ele traiu sua missão, fortificou Orthanc em Isengard, recorreu a práticas abjetas como o cruzamento de Orques e Homens e acabou enredado pela própria ambição e pelo poder maior de Sauron.",
+                imagem : "saruman.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            
+            radagast : {
+                nome : "Radagast",
+                raca : "Maia Istari",
+                quote : "O Inimigo deve ter alguma necessidade ou propósito importante, mas o que o faz olhar em direção a estas partes distantes e desoladas, não posso adivinhar.",
+                descricao : 'Radagast, o Castanho é um dos cinco Istari enviados à Terra-média para combater Sauron, sendo um Maia associado à Valië Yavanna e incluído na missão a pedido dela — o que lhe rendeu o desprezo de Saruman, que foi obrigado a aceitá-lo como companheiro. Ao chegar à Terra-média, encantou-se profundamente pelos animais e aves selvagens, adotando um nome que significa "o que cuida dos animais" e afastando-se do propósito original de auxiliar elfos e homens para viver em reclusão junto à natureza.',
+                imagem : "radagast.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            alatar : {
+                nome : "Alatar",
+                raca : "Maia Istari",
+                quote : "",
+                descricao : 'Alatar é um dos cinco Istari enviados à Terra-média para ajudar a combater Sauron, formando ao lado de seu amigo Pallando a dupla conhecida como os Magos Azuis (Ithryn Luin). Como um Maia ligado a Oromë, ele se voluntariou no conselho de Manwë e partiu rumo às regiões remotas do Leste da Terra-média, onde atuou longe dos registros do Oeste e teve seu destino final envolvido em mistério.',
+                imagem : "alatar.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            pallandor : {
+                nome : "Pallando",
+                raca : "Maia Istari",
+                quote : "",
+                descricao : "Pallando é o segundo integrante dos Magos Azuis (Ithryn Luin), sendo um dos cinco Istari enviados à Terra-média para auxiliar os povos livres contra Sauron. Embora tenha sido originalmente associado aos Valar Mandos e Nienna em anotações anteriores, nas versões finais ele é ligado a Oromë e junta-se à missão não por ordem direta do conselho, mas por ter sido escolhido por Alatar para acompanhá-lo como amigo, partindo com ele para as regiões remotas do Leste da Terra-média e deixando seu destino final envolto em mistério.",
+                imagem : "pallandor.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
+    },
+
+    segundaera : {
+        nome : "Segunda e Terceira Era",
+        descricao : "",
+        personagens : {
+            arpharazon : {
+
+            },
+            tarmiriel : {
+
+            },
+            amarie : {
+
+            },
+            anaire : {
+
+            },
+            celebrian : {
+
+            },
+            goldberry : {
+
             }
         }
     }
