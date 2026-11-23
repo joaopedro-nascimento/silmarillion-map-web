@@ -232,6 +232,16 @@ const familias = {
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
+            anaire : {
+                nome : "Anairë",
+                raca : "Elfo Noldo",
+                quote : "",
+                descricao : 'Anairë é a esposa de Fingolfin, uma Noldo, que se recusou a deixar Aman, principalmente por sua amizade com Eärwen, esposa de Arafinwë. Seus filhos (Findekáno, Turukáno, Arakáno e Írissë) partiram com o pai. Nas genealogias de 1959, ela foi definida como uma Vanya "que permaneceu em Túna", e o nome foi inserido como esposa de Fingolfin, com a nota de que "permaneceu em Aman"',
+                imagem : "anaire.jpg",
+                lugares : [""],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
             fingon : {
                 nome : "Fingon",
                 raca : "Elfo Noldo",
@@ -284,7 +294,7 @@ const familias = {
                 descricao : "",
                 imagem : "feanor.png",
                 lugares : ["hithlum", "lammoth"],
-                credito : "moredhel",
+                credito : "moredheli",
                 creditoLink : "https://www.tumblr.com/moredhel"
             },
             maedhros: {
@@ -381,6 +391,16 @@ const familias = {
                 descricao : "",
                 imagem : "finrod.jpg",
                 lugares : ["tolsirion", "nargothrond", "baradnimras", "ossiriand", "eglarest"],
+                credito : "talyris",
+                creditoLink : "https://www.tumblr.com/talyris"
+            },
+            amarie : {
+                nome : "Amárië",
+                raca : "Elfa Vanya",
+                quote : "",
+                descricao : "Amárië dos Vanyar foi a mulher que Felagund amou, mas, por ser uma Vanya, não teve permissão de acompanhá-lo no exílio. Por isso ele ficou sem esposa nem herdeiro. Após a morte dele, os textos dizem que ele habita em Valinor com ela. Nada se conta de seu caráter: ela existe apenas pela ausência e pelo amor que Felagund lhe devotava.",
+                imagem : "amarie.jpg",
+                lugares : [""],
                 credito : "talyris",
                 creditoLink : "https://www.tumblr.com/talyris"
             },
@@ -646,22 +666,44 @@ const familias = {
         descricao : "",
         personagens : {
             arpharazon : {
-
+                nome : "Ar-Pharazôn",
+                raca : "Homem",
+                quote : "Quem é o Senhor da Escuridão?",
+                descricao : 'Ar-Pharazôn (Tar-Calion, em élfico), o Dourado, é o 25º e último Rei de Númenor. Era belo, de grande estatura e comandou os Númenóreanos como capitão na Terra-média, mas tinha mais "poder de vontade do que de sabedoria". Tomou o cetro ao se casar à força com a prima Míriel, que passou a se chamar Ar-Zimraphel. Perseguiu os Fiéis, fez Sauron seu prisioneiro e depois seu conselheiro, adotou o culto a Melkor e liderou o ataque a Valinor. Morreu soterrado sob colinas desabadas em Aman, na Queda de Númenor.',
+                imagem : "arpharazon.jpeg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
             tarmiriel : {
-
-            },
-            amarie : {
-
-            },
-            anaire : {
-
+                nome : "Tar-Míriel",
+                raca : "Homem",
+                quote : "Tarde demais ela tentou ascender aos caminhos íngremes do Meneltarma até o lugar santo; pois as águas a alcançaram, e seu grito se perdeu no rugir do vento.",
+                descricao : 'Tar-Míriel (Ar-Zimraphel em adûnaico, nome que Ar-Pharazôn lhe deu) é a filha de Tar-Palantir e a herdeira legítima do cetro de Númenor, que seria sua por direito e pelas leis dos Númenóreanos. Nasceu em 3117 da Segunda Era e tinha olhos brilhantes. Era de grande beleza e estatura menor que a da maioria das mulheres de lá, um ano mais velha que o primo Pharazôn, mas parecia mais jovem. Elentir, irmão de Amandil, a amava, mas ela voltou o coração para Pharazôn, por sua beleza e riqueza. Ele a tomou por esposa contra sua vontade, num casamento que ia contra as leis, e com isso tomou o cetro. Foi Rainha reinante apenas no breve período de 3319 entre a partida de Ar-Pharazôn contra Valinor e a submersão de Númenor.',
+                imagem : "tarmiriel.png",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
             celebrian : {
-
+                nome : "Celebrían",
+                raca : "Elfa Noldo",
+                quote : "",
+                descricao : "Celebrían é filha de Galadriel e Celeborn de Lórien, e esposa de Elrond, que até então nunca se casara. Com ela, Elrond teve os gêmeos Elladan e Elrohir e uma filha (Arwen Undómiel nas versões mais tardias, Finduilas na mais antiga), em quem a imagem de Lúthien reaparece. Com seu casamento, as linhagens de Finwë vindas de Fingolfin e Finarfin se uniram e tiveram continuidade em Arwen. Seu destino é o episódio central ligado a ela: ao viajar para Lórien para visitar a mãe, foi capturada por Orques nas passagens das montanhas. Foi resgatada por Elrond e seus filhos, mas, após o temor e o tormento, já não queria permanecer na Terra-média, e partiu dos Portos Cinzentos por sobre o Mar.",
+                imagem : "celebrian.jpeg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
             },
             goldberry : {
-
+                nome : "Fruta d'Ouro",
+                raca : "Desconhecida",
+                quote : "As árvores e o capim e todas as coisas que crescem ou vivem neste lugar só pertencem a si mesmas. Tom Bombadil é o Senhor.",
+                descricao : "Fruta d'Ouro (Goldberry) é a esposa de Tom Bombadil e se apresenta como \"Filha do Rio\". Frodo a conhece na casa de Tom, na Floresta Velha: loira, de cabelos longos e vestido verde salpicado de prata, ela acolhe os hobbits com alegria e graça. Tolkien a descreve como alguém que \"representa as mudanças sazonais reais\" nas terras ribeirinhas no outono. Sua voz cristalina canta o tempo todo: canções de chuva, de rios e de lagos com estrelas nas profundezas. Quando Frodo, nos Túmulos, não a vê ao partir, ela aparece no alto da colina para se despedir. Tom a encontrou há muitos anos, \"sentada por entre os juncos\", cantando à beira de um lago. Todo fim de verão ele colhe nenúfares para ela. Seu papel é de acolhimento e proteção: ela \"tranca a noite lá fora\" e garante que os hobbits durmam em paz. A casa dos dois é um refúgio contra o medo da Floresta e das Colinas.",
+                imagem : "goldberry.jpg",
+                lugares : [""],
+                credito : "elendilions",
+                creditoLink : "https://ko-fi.com/elendilions/gallery"
             }
         }
     }
