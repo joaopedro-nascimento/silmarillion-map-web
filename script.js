@@ -426,10 +426,10 @@ const familias = {
                 raca : "Elfo Noldo",
                 quote : 'Ainda dizem os Eldar quando veem uma bela luta com grande disparidade de forças contra uma fúria maligna: "Ai de nós! É Glorfindel contra o Balrog", e seus corações ainda estão feridos por causa daquele belo homem dos Noldor.',
                 descricao : "",
-                imagem : "glorfindel.jpeg",
+                imagem : "glorfindel.jpg",
                 lugares : ["gondolin"],
-                credito : "elendilions",
-                creditoLink : "https://ko-fi.com/elendilions/gallery"
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
             },
             voronwe : {
                 nome : "Voronwë",
@@ -463,7 +463,9 @@ const familias = {
                 raca : "Homem",
                 quote : "Pois vitória é vitória, não importa o quão pequena, e não deve ser medida apenas pelo que se segue a ela.",
                 descricao : "",
-                imagem : "",
+                imagem : "turin.jpg",
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos",
                 lugares : ["dorlómin", "nargothrond", "amonrûdh", "tumhalad"]
             },
             tuor : {
@@ -508,10 +510,10 @@ const familias = {
                 raca : "Maia",
                 quote : "Suas espadas e seus conselhos hão de ter dois gumes.",
                 descricao : "",
-                imagem : "melian.jpeg",
+                imagem : "melian.jpg",
                 lugares : ["menegroth", "nanelmoth"],
-                credito : "elendilions",
-                creditoLink : "https://ko-fi.com/elendilions/gallery"
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
             },
             luthien : {
                 nome : "Lúthien Tinúviel",
@@ -565,10 +567,20 @@ const familias = {
                 raca : "Vala",
                 quote : "Este reino não hás de tomar para ti injustamente, pois muitos outros labutaram aqui não menos do que tu.",
                 descricao : "",
-                imagem : "manwe.webp",
+                imagem : "manwe.jpg",
                 lugares : [""],
-                credito : "alba_r_art",
-                creditoLink : "https://www.instagram.com/alba_r_art"
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos",
+            },
+            nienna : {
+                nome : "Nienna",
+                raca : "Valië",
+                quote : "E Nienna se levantou, e foi até Ezellohar, e lançou para trás seu capuz cinzento, e, com suas lágrimas, lavou as profanações de Ungoliant; e cantou em luto pela amargura do mundo e pela Maculação de Arda.",
+                descricao : "",
+                imagem : "nienna.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos",
             },
             aule : {
                 nome : "Aulë",
@@ -579,6 +591,36 @@ const familias = {
                 lugares : [""],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
+            },
+            mandos : {
+                nome : "Mandos",
+                raca : "Vala",
+                quote : "Falas de servidão. Se servidão for, não podes escapar dela: pois Manwë é Rei de Arda, e não de Aman apenas. E tua ação foi contra a lei, seja em Aman ou fora de Aman. Portanto, esta é a sentença: por doze anos hás de deixar Tirion, onde a ameaça foi pronunciada.",
+                descricao : "",
+                imagem : "mandos.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            varda : {
+                nome : "Varda",
+                raca : "Valië",
+                quote : "Então Varda saiu do concílio, e olhou para longe das alturas de Taniquetil, e contemplou a escuridão da Terra-média debaixo das estrelas inumeráveis, tênues e distantes. Então ela principiou um grande trabalho, a maior de todas as obras dos Valar desde sua vinda a Arda.",
+                descricao : "",
+                imagem : "varda.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            vana : {
+                nome : "Vána",
+                raca : "Valië",
+                quote : "A esposa de Oromë é Vána, a Sempre-jovem; ela é a irmã mais nova de Yavanna. Todas as flores brotam quando ela passa e se abrem se ela as vê; e todas as aves cantam à sua vinda.",
+                descricao : "",
+                imagem : "vana.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
             },
             uinen : {
                 nome : "Uinen",
