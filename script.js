@@ -4,13 +4,15 @@ const lugares = {
         tipo : "Cidade",
         descricao : "\"As Mil Cavernas\", salões ocultos de Thingol e Melian no rio de Esgalduin em Doriath. Os pilares de Menegroth eram entalhados à semelhanças das faias de Oromë, tronco, galho e folha e iluminado com lanternas de ouro. Aquela era a mais bela habitação de qualquer rei a jamais existir a leste do Mar.",
         x: 62, y: 34.5, icone: "nomemenegroth.png", largura: 90,
-        personagens : ["galadriel", "melian", "celegorm", "beleg", "luthien", "eol", "caranthir", "curufin", "amrod", "amras"]
+        personagens : ["thingol", "galadriel", "melian", "celegorm", "beleg", "luthien", "eol", "caranthir", "curufin", "amrod", "amras"]
     },
     gondolin: {
         nome : "Gondolin",
         tipo : "Cidade",
         descricao : "\"A Rocha Oculta\", cidade secreta do Rei Turgon, protegida pelas Montanhas Circundantes (Echoriath).",
         x: 49.2, y: 22.3, icone: "nomegondolin.png", largura: 78,
+        credito : "Leugumy",
+        creditoLink : "https://x.com/Leugumy",
         personagens : ["turgon", "fingolfin", "aredhel", "tuor", "maeglin", "glorfindel", "voronwe", "eol"]
     },
     dorlómin: {
@@ -39,7 +41,7 @@ const lugares = {
         tipo : "Cidade",
         descricao : "Ilha no rio, perto do Passo do Sirion, na qual Finrod construiu a torre de Minas Tirith; depois de ser tomada por Sauron, recebeu o nome de Tol-in-Gaurhoth.",
         x: 43.2, y: 22.2, icone: "nometolsirion.png", largura: 50,
-        personagens : ["finrod", "luthien", "curufin"]
+        personagens : ["finrod", "luthien", "curufin", "sauron"]
     },
     vinyamar : {
         nome : "Vinyamar",
@@ -80,7 +82,7 @@ const lugares = {
         tipo : "Região",
         descricao : '"Terra de Pinheiros", os grandes planaltos cobertos de florestas na fronteira norte de Beleriand, depois chamados de Taur-nu-Fuin.',
         x: 56.78, y: 21, icone: "nomedorthonion.png", largura: 189,
-        personagens : ["angrod", "aegnor", "finrod", "boromir", "bregolas", "barahir", "beren", "baragund", "belegund", "radhruin", "dairuin", "dagnir", "ragnor", "gildor", "gorlim", "arthad", "urthel", "hathaldir", "maedhros"]
+        personagens : ["angrod", "aegnor", "finrod", "boromir", "bregolas", "barahir", "beren", "baragund", "belegund", "radhruin", "dairuin", "dagnir", "ragnor", "gildor", "gorlim", "arthad", "urthel", "hathaldir", "maedhros", "sauron"]
     },
     falas : {
         nome : "Falas",
@@ -294,7 +296,7 @@ const familias = {
                 descricao : "",
                 imagem : "feanor.png",
                 lugares : ["hithlum", "lammoth"],
-                credito : "moredheli",
+                credito : "moredhel",
                 creditoLink : "https://www.tumblr.com/moredhel"
             },
             maedhros: {
@@ -485,6 +487,16 @@ const familias = {
         nome : "Sindar e Doriath",
         descricao : "",
         personagens : {
+            thingol : {
+                nome : "Thingol",
+                raca : "Elfo Sinda",
+                quote : "Traze-me em tua mão uma Silmaril da coroa de Morgoth.",
+                descricao : 'Thingol (Elwë Singollo, "Manto-gris") foi um dos líderes dos Teleri na marcha desde Cuiviénen, junto com o irmão Olwë. Perdeu-se em Nan Elmoth, onde foi enfeitiçado por Melian, e acabou como Rei de Doriath, governando os Sindar a partir de Menegroth, protegido pelo Cinturão de Melian. Pai de Lúthien, impôs a Beren a demanda da Silmaril como preço da mão dela. Mais tarde, cobiçou a joia e a mandou engastar no Nauglamír. Acabou morto pelos Anãos de Nogrod, que também queriam o colar, e Doriath caiu logo depois. O texto o apresenta como o único Elfo de Beleriand que viu as Duas Árvores com os próprios olhos.',
+                imagem : "thingol.png",
+                lugares : ["menegroth", "nanelmoth"],
+                credito : "moredhel",
+                creditoLink : "https://www.tumblr.com/moredhel"
+            },
             cirdan : {
                 nome : 'Círdan "O Armador"',
                 raca : "Elfo Sindar",
@@ -622,6 +634,66 @@ const familias = {
                 credito : "mandhos",
                 creditoLink : "https://www.tumblr.com/mandhos"
             },
+            yavanna : {
+                nome : "Yavanna Kementári",
+                raca : "Valië",
+                quote : "Pois enquanto estavas nos céus e com Ulmo construías as nuvens e derramavas as chuvas, eu ergui os galhos de grandes árvores para recebê-las, e algumas delas cantavam a Ilúvatar em meio ao vento e à chuva.",
+                descricao : "",
+                imagem : "yavanna.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            eonwe : {
+                nome : "Eönwë",
+                raca : "Maia",
+                quote : 'O direito à obra do pai, que os filhos de Fëanor anteriormente possuíam, tinha agora perecido por causa de seus muitos e impiedosos atos, estando cegados por seu voto e, acima de tudo, por causa do assassinato de Dior e do assalto aos Portos.',
+                descricao : 'Eönwë é um dos Maiar e o principal arauto de Manwë. Nas versões mais antigas da mitologia era Fionwë, filho de Manwë, mas Tolkien abandonou a ideia dos "Filhos dos Valar" e o redefiniu como mensageiro e porta-voz do Rei Antigo. Convoca Eärendil diante dos Poderes de Arda, lidera a hoste de Valinor na Grande Batalha contra Morgoth e guarda as Silmarils depois da vitória. Também é quem exige que Maedhros e Maglor voltem a Valinor, recusando entregar as joias aos filhos de Fëanor. É muito amado por Tulkas.',
+                imagem : "eonwe.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            arien : {
+                nome : "Arien",
+                raca : "Maia",
+                quote : "Luzentes demais eram seus olhos até mesmo para que os Eldar os fitassem e, deixando Valinor, ela abandonou a forma e a vestimenta a qual, como os Valar, usara lá e passou a ser como que uma chama nua, terrível na plenitude de seu esplendor.",
+                descricao : "Arien é uma Maia, espírito de fogo desde o princípio, escolhida pelos Valar para guiar o vaso do Sol (Anar), o fruto dourado de Laurelin. Nos dias das Árvores, cuidava das flores douradas nos jardins de Vána e as regava com os orvalhos de Laurelin. Foi preferida a Tilion por ser mais poderosa e por não temer os calores de Laurelin, que não a feriam; Melkor nunca conseguiu enganá-la nem atraí-la a seu serviço. Ao deixar Valinor, abandonou a forma que usava ali e tornou-se uma chama nua, terrível em seu esplendor. Morgoth a temia tanto que não ousava se aproximar, e escondia a si mesmo e a seus servos de seu olhar sob fumos e nuvens.",
+                imagem : "arien.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            tilion : {
+                nome : "Tilion",
+                raca : "Maia",
+                quote : "Então atacou Tilion, mandando espíritos de sombra contra ele, e houve contenda em Ilmen sob as sendas das estrelas, e Tilion saiu vitorioso: como ele sempre tem sido, embora ainda a escuridão perseguidora o alcance por vezes.",
+                descricao : "Tilion é um Maia, antigo caçador da companhia de Oromë, que tinha um arco prateado. Amava a prata: quando queria descansar, deixava as matas de Oromë e ia a Lórien, onde jazia sonhando à beira das lagoas de Estë, sob a luz bruxuleante de Telperion. Implorou para receber a tarefa de cuidar para sempre da última Flor de Prata, e por isso foi posto ao leme da ilha da Lua (Isil). É inconstante e incerto de velocidade, foge do curso designado e é atraído pelo esplendor de Arien, embora a chama de Anar o escorchasse. Morgoth o atacou com espíritos de sombra, mas ele saiu vitorioso, ainda que a escuridão perseguidora o alcance por vezes (os eclipses). Raramente se demora em Valinor, e muitas vezes mergulha no abismo além do Mar de Fora, vagando só pelas raízes de Arda.",
+                imagem : "tilion.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            osse : {
+                nome : "Ossë",
+                raca : "Maia",
+                quote : "e Ossë os instruiu, sentado numa rocha perto das margens da terra, e dele aprenderam toda maneira de saber do mar e de música do mar.",
+                descricao : "",
+                imagem : "osse.jpg",
+                lugares : ["nevrast", "balar"],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            sauron : {
+                nome : "Sauron",
+                raca : "Maia",
+                quote : "Três Anéis para os élficos reis sob o céu, Sete para os Anãos em recinto rochoso, Nove para os Homens, que a morte escolheu, Um para o Senhor Sombrio no espaldar tenebroso Na Terra de Mordor aonde a Sombra desceu.",
+                descricao : "",
+                imagem : "sauron.jpg",
+                lugares : ["tolsirion", "dorthonion", "angband"],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
             uinen : {
                 nome : "Uinen",
                 raca : "Maia",
@@ -641,6 +713,43 @@ const familias = {
                 lugares : ["nargothrond", "tumhalad"],
                 credito : "elendilions",
                 creditoLink : "https://ko-fi.com/elendilions/gallery"
+            }
+        }
+    },
+
+    morgoth : {
+        nome : "Servos de Morgoth e criaturas",
+        descricao : "",
+        personagens : {
+            morgoth : {
+                nome : "Morgoth",
+                raca : "Vala",
+                quote : "Senta-te agora aqui; e contempla as terras onde o mal e o desespero hão de sobrevir àqueles a quem amas. Ousaste zombar de mim e questionar o poder de Melkor, Mestre dos destinos de Arda. Portanto, com meus olhos hás de ver e com meus ouvidos hás de ouvir; e nunca hás tu de sair deste lugar antes que tudo esteja consumado até seu amargo fim.",
+                descricao : "",
+                imagem : "morgoth.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
+            },
+            thuringwethil : {
+                nome : "Thuringwethil",
+                raca : "Vampiro",
+                quote : "Thuringwethil sou eu, que alcanço a lua pálida, lhe lanço a sombra sobre a face grande na trêmula Beleriand!",
+                descricao : 'Thuringwethil é a mensageira de Sauron, que costumava voar até Angband em forma de vampira (morcego gigante). Seu couro de morcego foi levado por Húan desde Tol-in-Gaurhoth, e Lúthien o vestiu como disfarce ao entrar no reino de Morgoth. Na Balada de Leithian, porém, o nome é inventado pela própria Lúthien diante de Morgoth, e Christopher Tolkien especula que ele teria nascido ali como uma descrição enigmática ("a de sombra oculta") e só depois originou a personagem da mensageira-morcego.',
+                imagem : "thuringwethil.jpg",
+                lugares : [""],
+                credito : "moredhel",
+                creditoLink : "https://www.tumblr.com/moredhel"
+            },
+            huan : {
+                nome : "Huan",
+                raca : "Maia",
+                quote : "Assim como os Valar costumavam se trajar como os Filhos, muitos dos Maiar se trajavam como outras coisas viventes menores, como árvores, flores, feras.",
+                descricao : 'Húan é o Mastim de Valinor, um grande cão que pertencia a Celegorm e o seguia na Terra-média. Conquistado pelo amor de Lúthien, abandonou o mestre para servi-la e foi decisivo em sua demanda: com ele, Lúthien venceu os lobisomens e o próprio Sauron na ilha de Tol-in-Gaurhoth, resgatou Beren e depois o ajudou a curá-lo. Húan morreu ao matar Carcharoth na Caça do Lobo. Nas notas tardias, Tolkien o considera possivelmente um Maia, emissário de Manwë, que assumiu forma animal, e não uma criatura dotada de fëa: os Valar lhe teriam ensinado a fala e o elevado a um nível superior.',
+                imagem : "huan.jpg",
+                lugares : [""],
+                credito : "mandhos",
+                creditoLink : "https://www.tumblr.com/mandhos"
             }
         }
     },

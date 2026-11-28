@@ -78,6 +78,19 @@ const eventos = {
         lugares : ["vinyamar", "nevrast"],
         personagens : ["tuor", "voronwe", "ulmo"]
     },
+    mortedeturin : {
+        nome : "Túrin morre",
+        ano : 499,
+        resumo : "Túrin fincou o cabo da espada no chão e se jogou sobre a ponta de Gurthang, e a lâmina negra tomou-lhe a vida.",
+        descricao : "",
+        imagem : "mortedeturin.jpg",
+        credito : "mandhos",
+        creditoLink : "https://www.tumblr.com/mandhos",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 21",
+        lugares : ["brethil"],
+        personagens : ["turin"]
+    },
     maglorelrondelros: {
         nome: "Cativeiro de Elros e Elrond",
         ano: 538,
@@ -111,6 +124,32 @@ const eventos = {
         capitulo : "Quenta Silmarillion, cap. 13",
         lugares : ["angband", "ardgalen", "dorthonion", "passodosirion", "montanhasazuis"],
         personagens : ["morgoth", "fingolfin", "maedhros", "maglor"]
+    },
+    sonoulmo: {
+        nome: "O Sono de Ulmo",
+        ano: 50,
+        resumo: "Finrod e Turgon, viajando juntos após uma longa paz, são tomados por um sono profundo enviado por Ulmo.",
+        descricao: "Após uma longa paz, enquanto Finrod e Turgon viajavam juntos, ambos jaziam próximo dos Alagados do Crepúsculo quando Ulmo lançou sobre eles um sono profundo e os preocupou em sonhos, pressagiando que Morgoth poderia avançar de Angband. Depois disso, cada um buscou separadamente lugares de força e refúgio na terra. Mas Turgon não achou o que procurava, e retornou a Nevrast.",
+        imagem : "sonoulmo.jpeg",
+        credito : "elendilions",
+        creditoLink : "https://ko-fi.com/elendilions/gallery",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 15",
+        lugares : ["aelinuial", "nevrast"],
+        personagens : ["finrod", "turgon", "ulmo"]
+    },
+    maglormorre : {
+        nome: "O Roubo das Silmarils por Maedhros e Maglor",
+        ano: 587,
+        resumo: ".",
+        descricao: "No fim da Guerra da Ira, com Morgoth vencido, Maedhros e Maglor, os únicos filhos sobreviventes de Fëanor, tomaram as Silmarils do acampamento de Eönwë, mensageiro dos Valar, para cumprir o Juramento. Mas as joias queimaram suas mãos, pois eles já não tinham direito a elas. Maedhros, em dor e desespero, lançou-se num abismo de fogo e pereceu com a Silmaril. Maglor lançou a sua ao mar e passou a vagar pelas praias, cantando seu pesar. Assim, as três Silmarils ficaram perdidas: uma no céu, com Eärendil, outra no fogo sob a terra e a terceira no fundo do mar.",
+        imagem : "maglorqueima.jpg",
+        credito : "mandhos",
+        creditoLink : "https://www.tumblr.com/mandhos",
+        livro : "O Silmarillion",
+        capitulo : "Quenta Silmarillion, cap. 24",
+        lugares : [""],
+        personagens : ["maedhros", "maglor", "eonwe"]
     }
 };
 
